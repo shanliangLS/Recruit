@@ -1,0 +1,1595 @@
+.hgbanner {
+  text-align: center;
+  background-color: #000;
+}
+.hgbanner img {
+  vertical-align: middle;
+}
+.hgbanner a {
+  position: absolute;
+  right: 38px;
+  top: 38px;
+  padding: 0 12px;
+  line-height: 30px;
+  border: 1px solid #ff6e1f;
+  border-radius: 4px;
+  color: #ff6e1f;
+  font-size: 16px;
+}
+/******sojob******/
+#sojob iframe {
+  visibility: hidden !important;
+  display: none !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0 !important;
+  filter: alpha(opacity=0) !important;
+  left: -1000em !important;
+  right: auto !important;
+  bottom: auto !important;
+  top: -1000em !important;
+}
+#sojob .iframe-proxy {
+  visibility: visible !important;
+  display: block !important;
+  position: static !important;
+  z-index: 0 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  top: auto !important;
+}
+#sojob .sojob-search a, #sojob .job-content .sojob-result-list a, #sojob .category a, #sojob .friend-links a {
+  color: #0077b3;
+}
+#sojob .pager a {
+  text-decoration: none;
+}
+#sojob .sojob-search a:hover, #sojob .job-content .sojob-result-list a:hover, #sojob .category a:hover, #sojob .friend-links a:hover {
+  color: #ef6100;
+}
+#sojob .banner-ad {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+#sojob .banner-ad .banner-img {
+  display: block;
+  background: #150b57 url(//concat.lietou-static.com/fe-www-pc/v5/images/pages/zhaopin/banner_01.9d6e8c9d.jpg) center center no-repeat;
+  width: 100%;
+  height: 260px;
+}
+#sojob .container {
+  position: relative;
+}
+#sojob .job-content {
+  width: 720px;
+  float: left;
+}
+#sojob .sojob-search {
+  margin-top: -20px;
+  font-family: "Microsoft Yahei";
+}
+/*#sojob .sojob-search .search-bar-wrap {
+  height: 80px;
+}*/
+#sojob .sojob-search .search-bar-wrap .search-bar {
+  padding: 20px 0;
+  background-color: #f0f0f0;
+  font-size: 14px;
+}
+#sojob .sojob-search .search-bar.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 198;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, .34901961);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, .34901961);
+}
+#sojob .search-bar ul.search-condition {
+  float: left;
+  line-height: 36px;
+}
+#sojob .search-condition > li {
+  float: left;
+  margin-right: -2px;
+  border: 2px solid #3d9ccc;
+  height: 36px;
+  font-size: 14px;
+  color: #999;
+}
+#sojob .search-condition li .caret {
+  position: relative;
+  float: right;
+  height: 100%;
+  width: 16px;
+  margin: 0 4px 0 2px;
+  cursor: pointer;
+}
+#sojob .search-bar ul.search-condition .city-select .caret:after, #sojob .search-bar ul.search-condition .dropdown .dropdown-toggle .caret:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  border-width: 10px 8px 0;
+  border-style: solid;
+  border-color: #999 transparent transparent;
+}
+#sojob .search-condition li.dropdown {
+  display: none;
+}
+#sojob .search-bar .search-condition li.more-condition {
+  display: none;
+  width: 80px;
+  border-color: transparent;
+  text-align: center;
+}
+#sojob .search-bar .search-condition li.more-condition a:hover {
+  color: #3d9ccc;
+  text-decoration: none;
+}
+#sojob .search-bar.fixed .search-condition li.city-select {
+  /* display: none; */
+}
+#sojob .search-bar.fixed .search-condition li.salary-select {
+  display: none;
+}
+#sojob .search-bar.fixed .search-condition li.more-condition, #sojob .search-bar.fixed .search-condition li.dropdown {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+}
+#sojob .search-bar.fixed .search-condition li.dropdown.salary-select {
+  display: none;
+}
+#sojob .search-condition li.dropdown .dropdown-toggle {
+  width: 90px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #fff;
+  cursor: pointer;
+}
+#sojob .search-condition li.salary-select .dropdown-toggle {
+  width: 100px;
+}
+#sojob .dropdown .show-text, #sojob .city-select .show-text {
+  margin-right: 21px;
+  padding-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#sojob .search-condition li.city-select {
+  position: relative;
+  background-color: #fff;
+}
+#sojob .search-condition li.city-select input.city-more {
+  z-index: -1;
+}
+#sojob .search-condition li.city-select input.city-more, #sojob .search-condition li.city-select .city-more.LocalDataUIC, #sojob .search-condition li.city-select .city-more.LocalDataUIC .drop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 36px !important;
+  margin-top: 0 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0 !important;
+  filter: alpha(opacity=0) !important;
+  z-index: 1;
+}
+#sojob .search-bar .input-main {
+  position: relative;
+  line-height: 36px;
+  overflow: hidden;
+  border: 2px solid #3d9ccc;
+}
+#sojob .search-bar .input-main input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 140px 0 10px;
+  margin: 0;
+  border: 0 none;
+  outline: none;
+  vertical-align: top;
+}
+#sojob .search-bar .input-main input:hover, #sojob .search-bar .input-main input:focus {
+  outline: none;
+}
+#sojob .search-bar .input-main .search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  padding: 0;
+  margin: 0;
+  line-height: 36px;
+  border: 0 none;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background-color: #3d9ccc;
+}
+#sojob .search-bar .sojob-suggest {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  z-index: 20;
+  width: 640px;
+  display: none;
+}
+#sojob .search-bar .sojob-suggest ul {
+  border: 1px solid #ccc;
+  background: #fafafa;
+}
+#sojob .search-bar .sojob-suggest ul a {
+  display: block;
+  padding: 0 10px;
+  line-height: 28px;
+  color: #454545;
+  text-decoration: none;
+}
+#sojob .search-bar .sojob-suggest ul a:hover, #sojob .search-bar .sojob-suggest ul .hover a {
+  color: #ef6100;
+  background: #d5e9f2;
+}
+#sojob .sojob-search .search-condition-ex {
+  margin: 20px auto;
+  padding: 15px 15px 10px;
+  border: 1px solid #f0f0f0;
+  background-color: #f8f8f8;
+  font-size: 14px;
+}
+#sojob {
+  /* 公司列表 */
+  /* 热门搜索 */
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list {
+  position: relative;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul {
+  width: 780px;
+  height: 51px;
+  /* overflow: auto; */
+  overflow: hidden;
+  padding: 6px 115px 0 0;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul.active {
+  height: 256px;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li {
+  float: left;
+  border: 1px solid #e1e1e1;
+  width: 108px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  overflow: hidden;
+  margin: -1px -1px 0 0;
+  position: relative;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li:hover {
+  border: 1px solid #44AEDB;
+  z-index: 1;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li:hover a img {
+  display: none;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li:hover a span {
+  display: block;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li.choice {
+  border: 1px solid #44AEDB;
+  background: #444;
+  z-index: 1;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li.choice:before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: -10px;
+  right: -22px;
+  width: 70px;
+  height: 17px;
+  color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #45AFDD;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li.choice:after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 2px;
+  right: 1px;
+  width: 11px;
+  height: 10px;
+  background: url(//concat.lietou-static.com/fe-www-pc/v5/images/pages/zhaopin/comp-choice.9083b77b.png) no-repeat center;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li a {
+  position: relative;
+  width: 108px;
+  height: 50px;
+  padding: 0;
+  line-height: 50px;
+  /* border: 1px solid transparent; */
+  float: left;
+  color: #666;
+  font-size: 15px;
+  background: #fff;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li a img {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list ul li a span {
+  display: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .comp-list-option {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 15px;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .comp-list-option a {
+  color: #666;
+  text-decoration: none;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .comp-list-option a.comp-pack-up em {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 8px;
+  height: 5px;
+  padding-left: 6px;
+  vertical-align: middle;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .comp-list-option a.comp-pack-up em.more {
+  background: url(//concat.lietou-static.com/fe-www-pc/v5/images/pages/zhaopin/icon-choice.4133d50c.png) no-repeat center;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .comp-list-option a.comp-pack-up em.pack-up {
+  background: url(//concat.lietou-static.com/fe-www-pc/v5/images/pages/zhaopin/icon-pack-up.aa5c64ad.png) no-repeat center;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .comp-list-btns {
+  width: 780px;
+  padding: 20px 0 0 0;
+  text-align: center;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .comp-list-btns button {
+  width: 100px;
+  height: 36px;
+  padding-right: 10px;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .hot-comp-tags {
+  margin-top: 20px;
+  width: 770px;
+  font-size: 0;
+  max-height: 60px;
+  overflow: hidden;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .hot-comp-tags > a {
+  float: left;
+  font-size: 14px;
+  padding: 0 10px;
+  margin: 0 2px 10px 0;
+  color: #666;
+}
+#sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .hot-comp-tags > a:hover, #sojob .search-condition-ex .search-conditions dl.comp-list-box dd.comp-list .hot-comp-tags > a.active {
+  background-color: rgba(25, 158, 216, .8);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+}
+#sojob .sojob-search .search-bar-wrap .search-bar dl.hot-search {
+  color: #999;
+  padding-top: 9px;
+  font-size: 15px;
+}
+#sojob .sojob-search .search-bar-wrap .search-bar dl.hot-search dt {
+  float: left;
+  padding-right: 13px;
+}
+#sojob .sojob-search .search-bar-wrap .search-bar dl.hot-search dd {
+  float: left;
+}
+#sojob .sojob-search .search-bar-wrap .search-bar dl.hot-search dd a {
+  color: #666;
+  padding: 0 7.5px;
+}
+#sojob .search-condition-ex .search-conditions {
+  line-height: 24px;
+}
+#sojob .search-condition-ex .search-conditions dl {
+  margin-bottom: 10px;
+}
+#sojob .search-condition-ex .search-conditions dl dt {
+  float: left;
+  margin: 6px 10px 6px 0;
+  color: #999;
+}
+#sojob .search-condition-ex .search-conditions dl dd {
+  overflow: hidden;
+}
+#sojob .search-condition-ex .search-conditions dl dd.dropdown {
+  margin: 6px 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #999;
+}
+#sojob .search-condition-ex .search-conditions dl dd.dropdown-time {
+  margin-left: 0;
+}
+#sojob .search-condition-ex .search-conditions dl dd.dropdown-time .dropdown-toggle {
+  width: 125px;
+}
+#sojob .search-condition-ex .search-conditions dl dd.dropdown-jobkind .dropdown-toggle {
+  width: 125px;
+}
+#sojob .search-condition-ex .search-conditions dl dd.dropdown-compscale .dropdown-toggle {
+  width: 125px;
+}
+#sojob .search-condition-ex .search-conditions dl dd.dropdown-compkind .dropdown-toggle {
+  width: 125px;
+}
+#sojob .search-condition-ex .search-conditions dl dd > a, #sojob .search-condition-ex .search-conditions dl dd .custom-salary a, #sojob .search-condition-ex .search-conditions dl dd.select-industry ul li .sub-industry a {
+  display: inline-block !important;
+  *display: inline;
+  *zoom: 1;
+  margin: 6px 0;
+  padding: 0 10px;
+  border-radius: 2px;
+  margin-right: 2px;
+  color: #666;
+}
+#sojob .search-condition-ex .search-conditions dl dd .LocalDataUIC {
+  width: 57px !important;
+  margin-left: -57px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+  filter: alpha(opacity=0) !important;
+  z-index: 1;
+}
+#sojob .search-condition-ex .search-conditions dl dd .LocalDataUIC em.drop {
+  width: 57px;
+}
+#sojob .search-condition-ex .search-conditions dl dd > a:hover, #sojob .search-condition-ex .search-conditions dl dd > a.active, #sojob .search-condition-ex .search-conditions dl dd .custom-salary a:hover, #sojob .search-condition-ex .search-conditions dl dd .custom-salary a.active, #sojob .search-condition-ex .search-conditions dl dd.select-industry ul li .sub-industry a:hover, #sojob .search-condition-ex .search-conditions dl dd.select-industry ul li .sub-industry a.active {
+  text-decoration: none;
+  background-color: #199ed8;
+  background-color: rgba(25, 158, 216, .8);
+  color: #fff;
+}
+#sojob .search-condition-ex .search-conditions dl dd .custom-salary {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: bottom;
+}
+#sojob .search-condition-ex .search-conditions dl dd .custom-salary > a {
+  float: left;
+}
+#sojob .search-condition-ex .search-conditions dl dd .custom-salary p {
+  display: none;
+  margin: 6px 0 6px 75px;
+}
+#sojob .search-condition-ex .search-conditions dl dd .custom-salary p span {
+  color: #666;
+}
+#sojob .search-condition-ex .search-conditions dl dd .custom-salary.active p {
+  display: block;
+}
+#sojob .search-condition-ex .search-conditions dl dd .custom-salary input {
+  width: 42px;
+  padding: 0 3px;
+  margin: -2px 0 0;
+  text-align: right;
+  border: 1px solid #ccc;
+  line-height: 20px;
+}
+#sojob .search-condition-ex .search-conditions dl dd .custom-salary .btn-primary {
+  margin: -2px 0 0 7px;
+  line-height: 20px;
+  color: #fff;
+}
+#sojob .search-conditions dl dd.select-industry {
+  overflow: visible;
+  float: left;
+  width: 890px;
+}
+#sojob .search-conditions dl dd.select-industry a.more-industry {
+  color: #666;
+  background: none;
+  text-decoration: underline;
+}
+#sojob .search-conditions dl dd.select-industry ul {
+  position: relative;
+  width: 890px;
+  margin: -5px 0 0 -4px;
+}
+#sojob .search-conditions dl dd.select-industry ul li {
+  float: left;
+  padding: 0 13px;
+  margin-top: 10px;
+}
+#sojob .search-conditions dl dd.select-industry ul li span {
+  line-height: 28px;
+  color: #666;
+}
+#sojob .search-conditions dl dd.select-industry ul li:hover, #sojob .search-conditions dl dd.select-industry ul li.active {
+  background: #e9e9e9;
+}
+#sojob .search-conditions dl dd.select-industry ul li .sub-industry {
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 3px 10px;
+  background: #e9e9e9;
+}
+#sojob .search-conditions dl dd.select-industry ul li:hover .sub-industry, #sojob .search-conditions dl dd.select-industry ul li.active .sub-industry {
+  display: block;
+}
+#sojob .search-condition-ex .selected-condition {
+  padding: 0 10px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  color: #999;
+}
+#sojob .search-condition-ex .selected-condition .result-count {
+  float: right;
+  margin: 5px 0;
+  font-size: 14px;
+}
+#sojob .search-condition-ex .selected-condition .result-count em {
+  color: #fe8b26;
+}
+#sojob .search-condition-ex .selected-condition dl dd {
+  overflow: hidden;
+}
+#sojob .search-condition-ex .selected-condition dl dt, #sojob .search-condition-ex .selected-condition dl dd span {
+  float: left;
+  margin: 5px 10px 5px 0;
+  font-weight: normal;
+}
+#sojob .search-condition-ex .selected-condition dl dd span {
+  padding-left: 5px;
+  border-radius: 2px;
+  background-color: #199ed8;
+  background-color: rgba(25, 158, 216, .8);
+  color: #fff;
+}
+#sojob .search-condition-ex .selected-condition dl dd span a {
+  float: right;
+  margin: 0 5px;
+  color: #fff;
+}
+#sojob .search-condition-ex .selected-condition dl dd span a:hover {
+  text-decoration: none;
+}
+/*#sojob sojob-result*/
+#sojob .job-content .sojob-result {
+  position: relative;
+}
+#sojob .job-content .sojob-result .sojob-result-number {
+  line-height: 30px;
+  color: #999;
+}
+#sojob .job-content .sojob-result .sojob-result-number span {
+  color: #f50;
+}
+#sojob .job-content .sojob-no-result {
+  position: relative;
+  margin-bottom: 10px;
+}
+#sojob .sojob-no-result-alert {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-family: "microsoft yahei";
+  color: #2483b3;
+  text-align: center;
+  background-color: #c2e2f2;
+  border-color: #bedded;
+}
+#sojob .job-content .sojob-result h4 {
+  padding-left: 20px;
+  margin: 0;
+  line-height: 3;
+  border: 1px solid #ebebeb;
+  border-bottom: 0 none;
+  font-weight: normal;
+  background: #f0f0f0;
+  font-size: 12px;
+}
+#sojob .job-content .sojob-result .sojob-result-line {
+  color: #999;
+  padding: 20px 10px 8px;
+}
+#sojob .job-content .sojob-result .sojob-filter {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 678px;
+  height: 30px;
+  padding: 10px 20px;
+  background: #f0f0f0;
+  border: 1px solid #ebebeb;
+  border-width: 1px 1px 0 1px;
+}
+#sojob .job-content .sojob-no-result .sojob-filter {
+  /*width: 940px;*/
+}
+#sojob .job-content .sojob-result .sojob-filter .count {
+  float: left;
+  margin-top: 5px;
+}
+#sojob .job-content .sojob-result .sojob-filter .count strong {
+  color: #ff7f00;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select {
+  position: relative;
+  z-index: 2;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select .drop {
+  background: url(//concat.lietou-static.com/fe-www-pc/v5/images/pages/zhaopin/drop.085b633d.png) 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select:hover .drop {
+  background-position: 0 -16px;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select {
+  width: 85px;
+  float: right;
+  position: relative;
+  margin: 0 0 0 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 3px 25px 3px 10px;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul {
+  background: #fafafa;
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  left: -1px;
+  top: 26px;
+  width: 100%;
+  _width: 120px;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul a {
+  color: #454545;
+  display: block;
+  padding: 0 10px;
+  height: 28px;
+  line-height: 28px;
+  text-decoration: none;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul a:hover {
+  background: #d5e9f2;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul .checked a {
+  background: #3d9ccc;
+  color: #fff;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul .diy-area .diy-text {
+  padding: 0px 5px;
+  height: 32px;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul .diy-area .diy-btns {
+  display: none;
+  height: 30px;
+  background: #f0f0f0;
+  text-align: center;
+  padding: 6px 0 0 40px;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul .diy-area .diy-btns .btn-submit {
+  width: 40px;
+  height: 22px;
+  line-height: 22px;
+  background: #3d9ccc;
+  color: #fff;
+  padding: 0;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul .diy-area i {
+  color: #b3b3b3;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul .diy-area input {
+  border: 1px solid #ccc;
+  width: 33px;
+  height: 18px;
+}
+#sojob .job-content .sojob-result .sojob-filter .filter-select ul li {
+  margin: 0;
+  padding: 0;
+}
+#sojob .job-content .sojob-result .pager {
+  padding: 20px;
+}
+#sojob .job-content .result-bottom {
+  background-color: #f0f0f0;
+  border: 1px #ebebeb solid;
+  margin-top: 10px;
+  padding: 10px 20px 15px;
+}
+#sojob .job-content .result-bottom h3 {
+  font-size: 14px;
+  line-height: 15px;
+  border-left: 3px solid #449ccb;
+  text-indent: 5px;
+}
+#sojob .job-content .result-bottom p {
+  color: #999;
+}
+#sojob .wrap .side {
+  float: left;
+  margin-left: 30px;
+  width: 230px;
+  overflow: hidden;
+  _display: inline;
+}
+#sojob .wrap .side .related-box {
+  padding: 10px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+}
+#sojob .wrap .side .related-box h3 {
+  padding-left: 7px;
+  line-height: 16px;
+  color: #000;
+  font-size: 14px;
+  font-family: 'simsun';
+  border-left: 3px solid #3d9ccc;
+}
+#sojob .wrap .side .related-box h3 span {
+  position: relative;
+  font-size: 16px;
+  color: #454545;
+}
+#sojob .wrap .side .related-box h3 a {
+  float: right;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+  display: none;
+}
+#sojob .wrap .side .related-box ul li {
+  line-height: 34px;
+  border-top: 1px dotted #d9d9d9;
+}
+#sojob .wrap .side .related-box ul li:first-child {
+  border-top: 0;
+}
+#sojob .wrap .side .company-recommend h4 {
+  font-size: 14px;
+  color: #fff;
+  line-height: 30px;
+  background: #fd981d;
+  text-align: center;
+  width: 100%;
+}
+#sojob .wrap .side .company-recommend img {
+  width: 228px;
+  height: 80px;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+}
+#sojob .wrap .side .company-recommend dl {
+  margin-bottom: 15px;
+  position: relative;
+}
+#sojob .wrap .side .company-recommend dd {
+  padding-right: 48px;
+}
+#sojob .wrap .side .company-recommend .more-job {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #ff7f00;
+}
+#sojob .wrap .side .company-recommend a {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+}
+#sojob .category h2 {
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0 15px;
+  background-color: #eee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#fff));
+  background-image: linear-gradient(#eee, #fff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeeeeee', endColorstr='#ffffffff', GradientType=0);
+}
+#sojob .category ul {
+  margin-left: 20px;
+  padding: 0 15px 10px 15px;
+}
+#sojob .category ul li {
+  float: left;
+  line-height: 28px;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#sojob .friend-links {
+  margin-top: 15px;
+  padding: 5px 15px 15px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ebebeb;
+  color: #999;
+}
+#sojob .friend-links h6 {
+  font-size: 12px;
+}
+#sojob .friend-links ul li {
+  float: left;
+  width: 154px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#sojob .friend-links a {
+  color: #999;
+}
+#sojob .friend-links a:hover {
+  color: #f93;
+}
+#sojob .category h2 .more-link {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-weight: normal;
+  font-size: 12px;
+}
+#sojob .wrap .side .qq-group {
+  margin: 20px 0;
+  border-top: 3px solid #747676;
+  border-bottom: 3px solid #dadada;
+  background: url(//concat.lietou-static.com/fe-www-pc/v5/images/pages/zhaopin/subscribe_bg.f29f6eaf.jpg) repeat;
+  padding: 20px;
+  font: 14px/22px "\5FAE\8F6F\96C5\9ED1", "\5B8B\4F53", Arial;
+}
+#sojob .wrap .side .qq-group em {
+  font-size: 18px;
+}
+#sojob .wrap .side .qq-group .num {
+  font-size: 24px;
+  margin-top: 10px;
+}
+#sojob footer {
+  margin-top: 70px;
+}
+/*微信二维码*/
+#sojob .micro-box {
+  width: 140px;
+  padding-bottom: 10px;
+  height: 150px;
+  border: 1px solid #e5e5e5;
+  position: absolute;
+  right: -160px;
+  top: 0;
+}
+#sojob .micro-box img {
+  display: block;
+  width: 140px;
+  height: 140px;
+}
+#sojob .micro-box p .micro {
+  background: url(//concat.lietou-static.com/fe-www-pc/v5/images/pages/zhaopin/code_icon.4b6a16e4.jpg) no-repeat left top;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 14px;
+  margin-right: 2px;
+  position: relative;
+  top: 4px;
+  width: 18px;
+}
+#sojob .micro-box p {
+  color: #f93;
+  text-align: center;
+  margin-top: -6px;
+}
+/*sojob城市分站导航栏*/
+#sojob .city-nav-bar {
+  padding-bottom: 15px;
+}
+/* 搜索无结果优化 */
+#sojob .sojob-result .search-condition {
+  color: #999;
+  line-height: 30px;
+}
+#sojob .job-content .no-result {
+  padding-top: 0;
+}
+#sojob .job-content .search-more {
+  text-align: center;
+  padding: 18px 0;
+}
+#sojob .job-content .search-more a {
+  color: #0077b3;
+  font-size: 16px;
+  font-family: "microsoft yahei";
+  text-align: center;
+  outline: none;
+}
+#sojob .job-content .search-more a:hover, #sojob .job-content .search-more a:focus {
+  text-decoration: none;
+}
+#sojob .job-content .search-more a em {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  margin-left: 5px;
+}
+#sojob .job-content .search-more a:hover {
+  color: #ff7f00;
+}
+/*招聘列表*/
+#sojob ul.sojob-list {
+  margin-bottom: 10px;
+}
+#sojob ul.sojob-list li {
+  position: relative;
+  margin-top: 12px;
+  border: 1px solid #e5e5e5;
+}
+#sojob ul.sojob-list li.downgrade-search {
+  padding: 0 20px;
+  height: 40px;
+  background-color: #f0f0f0;
+  border: 1px solid #d9d9d9;
+  margin-bottom: -12px;
+  border-bottom: 0;
+  font-size: 14px;
+  line-height: 40px;
+}
+#sojob ul.sojob-list li.downgrade-search span {
+  color: #999;
+  text-decoration: line-through;
+}
+#sojob ul.sojob-list li.downgrade-search em {
+  color: #f50;
+}
+#sojob ul.sojob-list li:first-child {
+  margin-top: 0;
+}
+#sojob ul.sojob-list li a {
+  text-decoration: none;
+}
+#sojob ul.sojob-list li .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 42px solid #ff6363;
+  border-left: 42px solid transparent;
+  cursor: pointer;
+}
+#sojob ul.sojob-list li .icon b {
+  position: absolute;
+  top: -41px;
+  left: -19px;
+  font-size: 14px;
+  font-family: 'Microsoft Yahei';
+  color: #fff;
+}
+#sojob ul.sojob-list li .icon-yellow-triangle {
+  border-top-color: #fec144;
+}
+#sojob ul.sojob-list li .icon-title.icon-yellow-triangle {
+  background-color: #fec144;
+}
+#sojob ul.sojob-list li .icon-blue-triangle {
+  border-top-color: #2c99fe;
+}
+#sojob ul.sojob-list li .icon-title.icon-blue-triangle {
+  background-color: #2c99fe;
+}
+#sojob ul.sojob-list li .icon-orange-triangle {
+  border-top-color: #ff7e00;
+}
+#sojob ul.sojob-list li .icon-title.icon-orange-triangle {
+  background-color: #ff7e00;
+}
+#sojob ul.sojob-list li .sojob-item-main {
+  padding: 14px 18px 14px 21px;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info {
+  text-decoration: none;
+  color: #666;
+  float: left;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .job-name:hover, #sojob ul.sojob-list li .sojob-item-main a .company-name:hover {
+  color: #ff7f00;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info.nohover, #sojob ul.sojob-list li .sojob-item-main .nohover span {
+  cursor: text;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info.nohover .company-name:hover {
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info p {
+  margin-top: 12px;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .job-name, #sojob ul.sojob-list li .sojob-item-main .job-info h3 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  line-height: 24px;
+  margin: 0;
+  padding-right: 70px;
+  font-size: 18px;
+  font-family: 'Microsoft Yahei';
+  font-weight: normal;
+  color: #3d9ccc;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .job-name a, #sojob ul.sojob-list li .sojob-item-main .job-info h3 a {
+  color: #3d9ccc;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .job-name a:hover, #sojob ul.sojob-list li .sojob-item-main .job-info h3 a:hover {
+  color: #f60;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .job-name em, #sojob ul.sojob-list li .sojob-item-main .job-info h3 em {
+  margin: -3px 0 0 5px;
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: 'simsun';
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .condition {
+  width: 410px;
+  height: 20px;
+  margin-top: 14px;
+  font-family: 'Microsoft Yahei';
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .condition a.area {
+  cursor: default;
+  color: #666;
+  display: inline;
+  padding: 0 10px;
+  border-left: 1px solid #ccc;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .condition span.area {
+  cursor: default;
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .condition > p {
+  margin-top: 0;
+  width: 1000px;
+  height: 20px;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .time-info {
+  color: #999;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .time-info time {
+  padding-right: 12px;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .time-info span {
+  padding-left: 12px;
+  border-left: 1px solid #ccc;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info .time-info span.feelback {
+  padding: 2px 5px;
+  border: 1px solid #fea9a9;
+  border-radius: 3px;
+  color: #fd5353;
+}
+#sojob ul.sojob-list li .sojob-item-main .job-info h3 a {
+  text-decoration: none;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 330px;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info {
+  float: right;
+  padding: 0 5px 3px 20px;
+  width: 230px;
+  font-size: 14px;
+  min-height: 90px;
+  border-left: 1px dotted #8197a2;
+  font-family: 'Microsoft Yahei';
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .company-name {
+  margin-top: 3px;
+  height: 18px;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .company-name a {
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .company-name a:hover {
+  color: #f60;
+}
+#sojob ul.sojob-list li .sojob-item-main .nohover .company-name a:hover {
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .honesty-tips {
+  width: 250px;
+  height: 26px;
+  overflow: hidden;
+  margin-top: 9px;
+  color: #999;
+  font-size: 12px;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .field-financing {
+  height: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .field-financing .industry-link {
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .field-financing span {
+  float: left;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .temptation {
+  height: 30px;
+  overflow: hidden;
+  margin-top: 9px;
+  color: #666;
+}
+#sojob ul.sojob-list li .sojob-item-main .company-info .temptation span {
+  float: left;
+  padding: 2px 10px;
+  border: 1px solid #e1f2fa;
+  margin-right: 6px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background-color: #edf9ff;
+  color: #3d9ccc;
+}
+#sojob ul.sojob-list li .sojob-item-main p span {
+  display: inline;
+  padding: 0 10px;
+  border-left: 1px solid #ccc;
+}
+#sojob ul.sojob-list li .sojob-item-main p span:first-child {
+  padding-left: 0;
+  border: 0;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  overflow: visible !important;
+}
+/*.dropdown .dropdown-toggle {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  cursor: pointer;
+}*/
+/*.dropdown .dropdown-toggle .caret {
+  position: relative;
+  float: right;
+  height: 100%;
+  width: 16px;
+}*/
+/*.dropdown .dropdown-toggle .caret:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  border-width: 8px 5px 0;
+  border-style: solid;
+  border-color: #999 transparent transparent;
+}*/
+.dropdown .dropdown-toggle .show-text {
+  height: 100%;
+  margin-right: 25px;
+  vertical-align: middle;
+}
+.dropdown .dropdown-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.dropdown:hover .dropdown-list {
+  display: block;
+  margin-left: -1px;
+}
+.dropdown .dropdown-list .dropdown-item:hover, .dropdown .dropdown-list .dropdown-item.active {
+  background-color: #3d9ccc;
+}
+#sojob .dropdown .dropdown-list .dropdown-item:hover a, #sojob .dropdown .dropdown-list .dropdown-item.active a {
+  color: #fff;
+}
+#sojob .dropdown .dropdown-list .dropdown-item a {
+  display: block;
+  height: 100%;
+  padding: 0 10px;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #999;
+}
+#sojob .dropdown .dropdown-list .dropdown-item a:hover {
+  text-decoration: none;
+}
+/*热搜词*/
+#sojob .hot-word {
+  font-size: 12px;
+  margin-top: 5px;
+}
+#sojob .hot-word span {
+  font-size: #333;
+  float: left;
+}
+#sojob .hot-word .keywords {
+  width: 920px;
+  padding-left: 60px;
+}
+#sojob .hot-word a {
+  color: #666;
+  margin-right: 20px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  float: left;
+}
+#sojob .hot-word a:hover {
+  color: #0077b3;
+}
+.navbars {
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #dcdcdc;
+  display: none;
+}
+.navbars strong {
+  color: #666;
+}
+.navbars a {
+  font-size: 12px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.navbars .home_link {
+  color: #1d81c7;
+}
+.recommend-interesting {
+  padding-left: 20px;
+  line-height: 3;
+  border: 1px solid #ebebeb;
+  border-bottom: 0 none;
+  font-weight: 400;
+  background: #f0f0f0;
+  font-size: 12px;
+}
+/*内链模块*/
+.commonweblink-main .commonweblink-box span.channel {
+  color: #666;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  line-height: 25px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.commonweblink-main .commonweblink-box span.channel-info {
+  line-height: 25px;
+  margin-right: 15px;
+}
+/*公司卡片*/
+.company-card {
+  display: block;
+  margin: 0 auto 20px;
+  font-family: 'Microsoft Yahei';
+  border: 1px solid #e8e8e8;
+}
+.company-card a {
+  text-decoration: none;
+}
+.company-card dl {
+  padding: 14px;
+}
+.company-card dt.company-image {
+  float: left;
+  margin-right: 20px;
+  padding: 4px 9px;
+  border: 1px solid #eee;
+}
+.company-card dd.company-info {
+  position: relative;
+  margin-left: 200px;
+  padding-right: 160px;
+  padding-top: 16px;
+  font-size: 14px;
+  color: #666;
+}
+.company-card dl dd.company-info .enter-btn {
+  border-radius: 4px;
+  font-size: 16px;
+  color: #ff6600;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  line-height: 44px;
+  padding: 0 10px 0 14px;
+  border: 2px solid #ff6600;
+}
+.company-card dd.company-info .company-title {
+  color: #333;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.company-card dd.company-info .company-mates {
+  color: #333;
+  margin-top: 9px;
+}
+.company-card dd.company-info .company-name, .company-card dd.company-info .company-mates {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.company-card dd.company-info .company-mates span {
+  border-left: 1px solid #adadad;
+  padding: 0 12px;
+}
+.company-card dd.company-info .company-mates span:first-child {
+  padding-left: 0;
+  border: 0;
+}
+/* 广告位 */
+.ads-wrap {
+  display: none;
+  position: relative;
+}
+.ads-wrap .close-btn {
+  position: absolute;
+  top: 10px;
+  color: #fff;
+  right: 10px;
+  width: 14px;
+  cursor: pointer;
+  height: 20px;
+  background: rgba(255, 85, 64, .8);
+  border-radius: 50%;
+  padding-left: 6px;
+  line-height: 18px;
+}
+/* app二维码下载 */
+.download-area {
+  position: fixed;
+  border: 1px solid #e5e5e5;
+  top: 120px;
+  left: 500px;
+  margin-left: 50%;
+  width: 42px;
+  background: #fff;
+  width: 120px;
+  padding: 24px 0 20px;
+  text-align: center;
+}
+.download-area .alert-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #c1c1c1;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+.download-area .text-intro {
+  margin-top: 4px;
+}
+.download-area .text-intro p {
+  line-height: 18px;
+}
+/* 3.30.0 */
+#sojob ul.zhaopin-sojob-list-a li {
+  position: relative;
+  margin-top: 10px;
+  padding: 19px 19px 18px 19px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+#sojob ul.zhaopin-sojob-list-a li:first-child {
+  margin-top: 0;
+}
+#sojob ul.zhaopin-sojob-list-a li:hover {
+  cursor: pointer;
+}
+#sojob ul.zhaopin-sojob-list-a li a {
+  text-decoration: none;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .job-info {
+  float: left;
+  width: 390px;
+  height: 55px;
+  outline: none;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a a h3 {
+  width: 390px;
+  height: 25px;
+  line-height: 25px;
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Microsoft Yahei';
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a a:visited h3 {
+  color: #800080;
+}
+#sojob ul.zhaopin-sojob-list-a li .high-light {
+  color: #f60!important;
+}
+#sojob ul.zhaopin-sojob-list-a li .job-info h3 > span {
+  height: 25px;
+  line-height: 25px;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 342px;
+  color: #3695D9;
+}
+#sojob ul.zhaopin-sojob-list-a li .job-info h3 > i.small-job-icons {
+  font-size: 12px;
+  font-weight: normal;
+  height: 16px;
+  float: left;
+  text-align: center;
+  line-height: 16px;
+  margin: 3px 0 0 14px;
+  padding: 0 2px;
+  border: 1px solid;
+  background: #fff;
+}
+/* 急聘 */
+#sojob ul.zhaopin-sojob-list-a li .job-info h3 > i.urgent-employ-icons {
+  color: #F2584A;
+  border-color: #F2584A;
+}
+/* 直招 */
+#sojob ul.zhaopin-sojob-list-a li .job-info h3 > i.direct-recruit-icons {
+  color: #E18946;
+  border-color: #E18946;
+}
+/* 猎头 */
+#sojob ul.zhaopin-sojob-list-a li .job-info h3 > i.hunter-icons {
+  color: #44C0A5;
+  border-color: #44C0A5;
+}
+/* 优选 */
+#sojob ul.zhaopin-sojob-list-a li .job-info h3 > i.preference-icons {
+  color: #FF7E00;
+  border-color: #FF7E00;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .job-info .condition {
+  height: 21px;
+  line-height: 21px;
+  margin-top: 9px;
+  font-family: 'Microsoft Yahei';
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .job-info .condition span {
+  position: relative;
+  color: #999;
+  float: left;
+  padding: 1px 5px 0;
+  height: 20px;
+  line-height: 20px;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .job-info .condition span.area:after, #sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .job-info .condition span.edu:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: 0;
+  height: 14px;
+  border-right: 1px solid #979797;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .job-info .condition span:first-child {
+  color: #f60;
+  border-left: 0;
+  padding: 0 3px 0 0;
+  font-size: 16px;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .job-info .condition span.area {
+  border-left: 0;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .company-info {
+  float: right;
+  font-family: 'Microsoft Yahei';
+  font-size: 14px;
+  height: 53px;
+  padding-top: 2px;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .company-info .company-name {
+  width: 240px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 22px;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .company-info .company-name a {
+  color: #333;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .company-info .company-name a[href]:hover {
+  color: #f60;
+  cursor: pointer;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .company-info .field-financing {
+  height: 20px;
+  width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  margin-top: 11px;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .company-info .field-financing span {
+  color: #999;
+}
+#sojob ul.zhaopin-sojob-list-a li .sojob-item-main-a .company-info .field-financing span a {
+  color: #999;
+}
+.job-preview-wrap {
+  position: absolute;
+  z-index: 200;
+}

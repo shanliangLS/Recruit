@@ -1,0 +1,165 @@
+.left_section {
+	width: 650px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+.resume_pannel {
+	background-color: #fff;
+	border-radius: 5px;
+}
+.resume_pannel_title {
+	background-color: #fafafa;
+	border-radius: 4px 4px 0 0;
+}
+.tab-content {
+	border: solid #ddd 1px;
+	border-top: none;
+	min-height: 540px;
+	padding: 20px;
+}
+
+.right_section {
+	float: right;
+	width: 290px;
+	margin-top: 20px;
+}
+.resume {
+	height: 115px;
+	position: relative;
+	margin-bottom: 10px;
+	padding: 15px 30px 14px 21px;
+	border: 1px solid #d9d9d9;
+	background-color: #fff;
+}
+.icon_triangle {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: 42px solid #ff6363;
+    border-top-color: rgb(255, 99, 99);
+	border-left: 42px solid transparent;
+	cursor: pointer;
+}
+.icon_blue_triangle {
+	border-top-color: #2c99fe;
+}
+.icon_green_triangle {
+	border-top-color: limegreen;
+}
+.icon_triangle_b {
+	position: absolute;
+	top: -40px;
+	left: -19px;
+	font-size: 14px;
+	font-family: 'Microsoft Yahei';
+	font-style: normal;
+	color: #fff;
+}
+.sojob_item_main {
+
+}
+.job_info {
+	float: left;
+	width: 310px;
+	padding-right: 15px;
+}
+.jobseeker_info {
+	width: 385px;
+}
+.job_info>h3 {
+	line-height: 21px;
+	margin: 0;
+	font-size: 18px;
+	font-family: 'Microsoft Yahei';
+	font-weight: normal;
+	color: #3d9ccc;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.job_info>.condition {
+	height: 20px;
+	margin-top: 13px;
+	font-family: 'Microsoft Yahei';
+	font-size: 14px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.sojob_item_main p span:first-child {
+    padding-left: 0;
+    border: 0;
+}
+.sojob_item_main p span {
+    display: inline;
+	padding: 0 10px;
+	border-left: 1px solid #ccc;
+}
+.text_warning {
+    color: #ff6600;
+}
+.time_info {
+    margin-top: 11px;
+    color: #999;
+}
+.time_info time {
+    padding-right: 12px;
+}
+
+.company-info {
+    float: left;
+    padding: 0 5px 3px 20px;
+    width: 230px;
+    height: 88px;
+    border-left: 1px dotted #8197a2;
+    font-family: 'Microsoft Yahei';
+    font-size: 14px;
+}
+.btn_job_pass {
+	width: 160px;
+}
+.company-name {
+    margin-top: 5px;
+    height: 18px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.job-name {
+	margin-top: 5px;
+    height: 18px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.field-financing {
+    height: 20px;
+    margin-top: 9px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.honesty-tips {
+    width: 246px;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 16px;
+    color: #999;
+    font-size: 12px;
+}
+.temptation {
+    height: 30px;
+    overflow: hidden;
+    margin-top: 9px;
+}
+.btn_pass {
+	margin-top: 6px;
+	width: 100px;
+}

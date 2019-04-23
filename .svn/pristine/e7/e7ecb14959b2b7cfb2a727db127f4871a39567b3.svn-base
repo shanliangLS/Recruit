@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/homepageStyle.css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/commentCSS/spop.min.css"/>
+
+    <script type="text/javascript" src="/static/JQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/commentJS/vue.min.js"></script>
+    <script src="/static/commentJS/spop.min.js"></script>
+</head>
+<body style="background-color: #e6e6e6;">
+
+<div class="topbar">
+    <div class="wp">
+        <a href="" class="logo l"></a>
+        <ul id="nav" class="topnav topleftnav l">
+            <li class="current"><a href="/jobseeker/homepage">首页</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">企业招聘 <b class="caret"></b></a>
+                <ul class="dropdown-menu" style="margin-top: 16px; border-radius: 0 4px 4px 4px;">
+                    <li><a href="/jobseeker/work_search?type=1" style="height: 30px; line-height: 25px;">IT·互联网</a></li>
+                    <li><a href="/jobseeker/work_search?type=2" style="height: 30px; line-height: 25px;">房地产</a></li>
+                    <li><a href="/jobseeker/work_search?type=3" style="height: 30px; line-height: 25px;">金融</a></li>
+                    <li><a href="/jobseeker/work_search?type=4" style="height: 30px; line-height: 25px;">消费品</a></li>
+                    <li><a href="/jobseeker/work_search?type=5" style="height: 30px; line-height: 25px;">汽车·制造</a></li>
+                    <li><a href="/jobseeker/work_search?type=6" style="height: 30px; line-height: 25px;">医疗·化工</a></li>
+                </ul>
+            </li>
+            <li><a href="/jobseeker/guide">就业指南</a></li>
+            <li><a href="/jobseeker/job_fair">招聘会</a></li>
+            <li><a href="/jobseeker/part_time_job">兼职天地</a></li>
+            <!-- <li><a href="">简历</a></li> -->
+        </ul>
+        <ul class="topnav toprightnav r">
+            <!-- <li class="r"><a href="">我是{{userType}}</a></li> -->
+            <li class="dropdown r">
+                <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle"></i></a>
+                <ul class="dropdown-menu" style="margin-top: -1px; border-radius: 0 4px 4px 4px;">
+                    <li><a href="/auth/logout" style="height: 30px; line-height: 25px;">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="wp">
+    <div class="left_section">
+        <div class="resume_pannel">
+            <ul class="nav nav-tabs resume_pannel_title">
+                <li class="active"><a data-toggle="tab" href="#resume_pannel1" onfocus="this.blur();">已通过简历</a></li>
+                <li><a data-toggle="tab" href="#resume_pannel2" onfocus="this.blur();">未审核简历</a></li>
+                <li><a data-toggle="tab" href="#resume_pannel3" onfocus="this.blur();">全部简历</a></li>
+                <!-- <li><a data-toggle="tab" href="#menu2">菜单 2</a></li>
+                <li><a data-toggle="tab" href="#menu3">菜单 3</a></li> -->
+            </ul>
+
+            <div class="tab-content" id="deliver_resume">
+                <div id="resume_pannel1" class="tab-pane fade in active">
+                    <template v-for="resume in passedResumes">
+                        <div class="resume">
+                            <i class="icon_triangle" v-bind:class="resume.icon_color">
+                                <b class="icon_triangle_b">{{ resume.status }}</b>
+                            </i>
+                            <div class="sojob_item_main">
+                                <a class="job_info">
+                                    <h3>{{ resume.job }}</h3>
+                                    <p class="condition clearfix" v-bind:title="resume.job_info">
+                                        <span class="text_warning">{{ resume.annual_salary }}</span>
+                                        <span>{{ resume.location }}</span>
+                                        <span>{{ resume.education }}</span>
+                                        <span>{{ resume.experience }}</span>
+                                    </p>
+                                    <p class="time_info clearfix">
+                                        <time>投递时间: {{ resume.deliver_time }}</time>
+                                    </p>
+                                </a>
+                                <div class="company-info">
+                                    <a v-bind:title="resume.companyName" class="nohover">
+                                        <p class="company-name">{{ resume.companyName }}</p>
+                                        <p class="field-financing"><span>{{ resume.industry }}</span></p>
+                                        <p class="honesty-tips"><i class="icons24 icons24-honesty"></i><em>该职位由《钐椋诚信联盟》成员代理发布</em>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div id="resume_pannel2" class="tab-pane fade">
+                    <template v-for="resume in notSeeResumes">
+                        <div class="resume">
+                            <i class="icon_triangle" v-bind:class="resume.icon_color">
+                                <b class="icon_triangle_b">{{ resume.status }}</b>
+                            </i>
+                            <div class="sojob_item_main">
+                                <a class="job_info">
+                                    <h3>{{ resume.job }}</h3>
+                                    <p class="condition clearfix" v-bind:title="resume.job_info">
+                                        <span class="text_warning">{{ resume.annual_salary }}</span>
+                                        <span>{{ resume.location }}</span>
+                                        <span>{{ resume.education }}</span>
+                                        <span>{{ resume.experience }}</span>
+                                    </p>
+                                    <p class="time_info clearfix">
+                                        <time>投递时间: {{ resume.deliver_time }}</time>
+                                    </p>
+                                </a>
+                                <div class="company-info">
+                                    <a v-bind:title="resume.companyName" class="nohover">
+                                        <p class="company-name">{{ resume.companyName }}</p>
+                                        <p class="field-financing"><span>{{ resume.industry }}</span></p>
+                                        <p class="honesty-tips"><i class="icons24 icons24-honesty"></i><em>该职位由《钐椋诚信联盟》成员代理发布</em>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div id="resume_pannel3" class="tab-pane fade">
+                    <template v-for="resume in AllResumes">
+                        <div class="resume">
+                            <i class="icon_triangle" v-bind:class="resume.icon_color">
+                                <b class="icon_triangle_b">{{ resume.status }}</b>
+                            </i>
+                            <div class="sojob_item_main">
+                                <a class="job_info">
+                                    <h3>{{ resume.job }}</h3>
+                                    <p class="condition clearfix" v-bind:title="resume.job_info">
+                                        <span class="text_warning">{{ resume.annual_salary }}</span>
+                                        <span>{{ resume.location }}</span>
+                                        <span>{{ resume.education }}</span>
+                                        <span>{{ resume.experience }}</span>
+                                    </p>
+                                    <p class="time_info clearfix">
+                                        <time>投递时间: {{ resume.deliver_time }}</time>
+                                    </p>
+                                </a>
+                                <div class="company-info">
+                                    <a v-bind:title="resume.companyName" class="nohover">
+                                        <p class="company-name">{{ resume.companyName }}</p>
+                                        <p class="field-financing"><span>{{ resume.industry }}</span></p>
+                                        <p class="honesty-tips"><i class="icons24 icons24-honesty"></i><em>该职位由《钐椋诚信联盟》成员代理发布</em>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <!-- <div id="menu2" class="tab-pane fade">
+                    <h3>菜单 2</h3>
+                    <p>这是菜单 2 显示的内容。这是菜单 2 显示的内容。这是菜单 2 显示的内容。</p>
+                </div>
+                <div id="menu3" class="tab-pane fade">
+                    <h3>菜单 3</h3>
+                    <p>这是菜单 3 显示的内容。这是菜单 3 显示的内容。这是菜单 3 显示的内容。</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-c-pc/v5/css/common/common.a9b13f24.css">
+    <link rel="stylesheet" href=" https://concat.lietou-static.com/fe-c-pc/v5/css/pages/home.8e9d3d23.css">
+    <div class="right_section" id="home">
+        <div class="side" style=" width: 290px;background: #3d9ccc;">
+            <div class="box-primary box-golden-card unvip" data-selector="userInfomation"
+                 style="width: 290px; margin-bottom: 0;">
+                <div class="clearfix">
+                    <div class="user-photo"><img class="normalFace"
+                                                 src="https://image0.lietou-static.com/normal/55557f3b28ee44a8919620ce01a.gif">
+                    </div>
+                    <div class="user-info">
+                        <div><span>{{left.name}}</span></div>
+                        <p>{{left.email}}</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="user-status">
+                    <p>
+                        <span title="天津">{{left.education}}</span>
+                        <span class="muted">|</span>
+                        <span title="计算机硬件/网络设备">{{left.major}}</span>
+                        <span class="muted">|</span> {{left.college}}
+                        <!--//name,major,年龄,education,work-->
+                        <!--//email-->
+                    </p>
+                </div>
+                <div class="user-status">
+                    <p>
+                        <span title="天津">年龄</span>
+                        <span class="muted">|</span>
+                        <span title="计算机硬件/网络设备">{{left.age}}岁</span>
+
+                    </p>
+                    <p>
+                        <span>工作经历</span>
+                    </p>
+                    <p>{{left.work}}</p>
+                </div>
+                <!--<div class="credit-cabinet">-->
+                <!--<h3>职场信用分：<span class="text-warning">505</span></h3>-->
+                <!--<div class="credit-cabinet-content">-->
+                <!--<div class="credit-rate">-->
+                <!--<div class="credit-rate-point" style="width: 54%;"></div>-->
+                <!--</div>-->
+                <!--<p>已经打败<span class="text-warning">40%</span>的同行</p>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <div class="user-status">
+                    <ul class="clearfix">
+                        <li><a href="/jobseeker/resume" class="icons24 icons24-editing"><span>编辑简历</span></a></li>
+                        <li><a href="/returnAccountSetting" class="icons24 icons24-set"><span>帐号设置</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="/static/commentJS/vue.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            type: "POST",
+            url: "/deliverResumes",
+            dataType: "JSON",
+            success: function (deliverResumesData) {
+                // console.log(deliverResumesData);
+                if (deliverResumesData.status == "OK") {
+                    new Vue({
+                        el: "#deliver_resume",
+                        data: {
+                            resumes: deliverResumesData.data
+                        },
+                        computed: {
+                            passedResumes: function () {
+                                var resume_array = this.resumes;
+                                resume_array = resume_array.filter(function (item) {
+                                    if (item.deliver_status == 1) {
+                                        item.status = "过";
+                                        item.icon_color = "icon_green_triangle";
+                                        item.job_info = item.annual_salary + "_" + item.location + "_" + item.education + "_" + item.experience;
+                                        return item;
+                                    }
+                                });
+                                return resume_array;
+                            },
+                            notSeeResumes: function () {
+                                var resume_array = this.resumes;
+                                resume_array = resume_array.filter(function (item) {
+                                    if (item.deliver_status == 0) {
+                                        item.status = "未";
+                                        item.icon_color = "icon_blue_triangle";
+                                        item.job_info = item.annual_salary + "_" + item.location + "_" + item.education + "_" + item.experience;
+                                        return item;
+                                    }
+                                });
+                                return resume_array;
+                            },
+                            AllResumes: function () {
+                                var resume_array = this.resumes;
+                                resume_array = resume_array.filter(function (item) {
+                                    if (item.deliver_status == 0) {
+                                        item.status = "未";
+                                        item.icon_color = "icon_blue_triangle";
+                                        item.job_info = item.annual_salary + "_" + item.location + "_" + item.education + "_" + item.experience;
+                                    } else if (item.deliver_status == 1) {
+                                        item.status = "过";
+                                        item.icon_color = "icon_green_triangle";
+                                        item.job_info = item.annual_salary + "_" + item.location + "_" + item.education + "_" + item.experience;
+                                    } else if (item.deliver_status == 2) {
+                                        item.status = "驳";
+                                        item.icon_color = "";
+                                        item.job_info = item.annual_salary + "_" + item.location + "_" + item.education + "_" + item.experience;
+                                    }
+                                    return item;
+                                });
+                                return resume_array;
+                            },
+                        }
+                    });
+                } else {
+                    var dataReason = deliverResumesData.reason;
+                    if (deliverResumesData.reason == "" || typeof (deliverResumesData.reason) == "undefined") {
+                        dataReason = "网络连接错误，请稍后重试";
+                    }
+                    spop({
+                        template: '<h4 class="spop-title">查询投递简历失败</h4>' + dataReason,
+                        position: 'top-center',
+                        style: 'error',
+                        autoclose: 5000
+                    });
+                    return;
+                }
+            }
+        });
+        getLeftData();
+    });
+
+    function getLeftData() {
+        //name,major,年龄,education,work
+        //email
+        $.post("http://localhost:8080/getPersonalData", {
+            // uid:2,
+
+        }, function (data) {
+            // alert(data);
+            data = JSON.parse(data);
+            if (data.status == "OK") {
+                var vue1 = new Vue({
+                    el: "#home",
+                    data: {
+                        left: {
+                            // name:"石凯峰",
+                            // major:"软件工程",
+                            // age:18,
+                            // education:"本科",
+                            // email:"feng45k@qq.com",
+                            // work:"在某某公司工作几年",
+                            // college:"河北工业大学"
+                        }
+                    }
+                });
+                vue1.$data.left = data.data;
+            } else {
+                var dataReason = data.reason;
+                if (data.reason == "" || typeof (data.reason) == "undefined") {
+                    dataReason = "数据获取失败，请稍后重试";
+                }
+                spop({
+                    template: '<h4 class="spop-title">个人信息数据获取失败</h4>' + dataReason,
+                    position: 'top-center',
+                    style: 'error',
+                    autoclose: 5000
+                });
+            }
+        });
+    }
+</script>
+
+<!--#set var='compatible' value=''-->
+<link rel="stylesheet " href="https://concat.lietou-static.com/fe-c-pc/v5/css/common/footer.15139a62.css">
+<footer id="footer-p-beta2">
+    <hr>
+    <div class="wrap">
+        <div class="copyright">
+            <div class="copy-side">
+                服务热线 (免长话费)<br><strong>400-882-3823</strong><br>
+                <small>工作日 9:00-19:00</small>
+            </div>
+            <div class="copy-main">
+                <div class="item">
+                    <dl>
+                        <dt>投资者关系</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">公司简介</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">信息披露</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">企业管制</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">投资者关系联络</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>帮助</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">经理人帮助</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户注册</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于您的简历</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于猎头</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于职位</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>共赢</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">网站合作</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户协议</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">网站地图</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">意见反馈</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">加入钐椋网</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>导航</dt>
+                        <dd><a href="" target="_blank">猎聘天津</a></dd>
+                        <dd><a href="" target="_blank">全部招聘</a></dd>
+                        <dd><a href="" target="_blank">职位大全</a></dd>
+                        <dd><a href="" target="_blank">招聘职位</a></dd>
+                        <dd><a href="" target="_blank">企业名录</a></dd>
+                        <dd><a href="" target="_blank">城市列表</a></dd>
+                    </dl>
+                </div>
+                <div class="item item-weibo">
+                    <a href="" target="_blank" rel="nofollow"><i class="weibo"></i></a>
+                    <p>钐椋微博</p>
+                    <a class="btn-sina" href="" target="_blank" rel="nofollow"></a>
+                </div>
+                <div class="item item-apps">
+                    <i class="mishu" style="background: url(/static/images/mishu.png) no-repeat; background-size: 100%;"></i>
+                    <p>钐椋微信</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-footer">
+        <p>京ICP备12345678号 合字2B-20181226 人才服务许可证:123456789101号
+            <a class="police-record" href="">
+                <img src="">
+                <span>京公网安备 12345678901112号</span>
+            </a>
+        </p>
+        <p>Copyright © 2006-2018 shanliang.com All Rights Reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>

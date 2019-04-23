@@ -1,0 +1,841 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>简历</title>
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/spop.min.css">
+    <!--#set var='compatible' value=''-->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script type="text/javascript" src="/static/JQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/commentJS/spop.min.js"></script>
+    <script type="text/javascript" src="/static/layer/layer.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="dns-prefetch" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/header.297679f4.css">
+
+
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/common.27fbd75f.css">
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/message.60de58f3.css">
+
+    <link rel="stylesheet " href="https://concat.lietou-static.com/fe-c-pc/v5/css/pages/page.resume.b8894d6a.css">
+
+
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/headerStyle.css">
+    <!-- <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <script type="text/javascript" src="resources/JQuery/jquery-3.3.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="resources/bootstrap/js/bootstrap.js"></script> -->
+    <script src="../../static/commentJS/vue.min.js"></script>
+
+    <style type="text/css">
+        .lt-plugins-simplevaliderrortips {
+            position: absolute;
+            font-size: 12px;
+            background: #fff7e9;
+            border: 1px solid #ffd999;
+            border-radius: 5px;
+            padding: 4px 10px;
+            color: #e75c00;
+            line-height: 20px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+            z-index: 997;
+        }
+
+        .lt-plugins-simplevaliderrortips .error-content {
+            white-space: nowrap;
+        }
+
+        .lt-plugins-simplevaliderrortips em,
+        .lt-plugins-simplevaliderrortips i {
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            overflow: hidden;
+            width: 0;
+            height: 0;
+            z-index: 999;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent transparent;
+            _border-color: tomato tomato tomato tomato;
+            border-top-color: #fff7e9;
+            _filter: chroma(color=tomato);
+        }
+
+        .lt-plugins-simplevaliderrortips em {
+            bottom: -21px;
+            z-index: 998;
+            border-top-color: #ffd999;
+        }
+    </style>
+    <style type="text/css">
+        .j-autocomplete {
+            position: absolute;
+            z-index: 1000;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .j-autocomplete ul li {
+            margin: 0;
+            padding: 0 4px;
+            font-size: 14px;
+            line-height: 26px;
+            cursor: pointer;
+            word-break: break-all;
+        }
+
+        .j-autocomplete ul li.hasFocus {
+            background-color: #639ace;
+            color: #fff;
+        }
+
+        .j-autocomplete ul li sub {
+            margin-left: 10px;
+            font-size: 12px;
+            color: gray;
+        }
+
+        .j-autocomplete ul li.hasFocus sub {
+            color: #eee;
+        }
+
+        .j-autocomplete ul li sub {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="wp">
+        <a href="" class="logo l"></a>
+        <ul id="nav" class="topnav topleftnav l">
+            <li><a href="/jobseeker/homepage">首页</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" style="color: #999;">企业招聘 <b class="caret"></b></a>
+                <ul class="dropdown-menu" style="margin-top: 0px; border-radius: 0 4px 4px 4px;">
+                    <li><a href="/jobseeker/work_search?type=1" style="height: 30px; line-height: 25px;">IT·互联网</a></li>
+                    <li><a href="/jobseeker/work_search?type=2" style="height: 30px; line-height: 25px; width: 87px;">房地产</a>
+                    </li>
+                    <li><a href="/jobseeker/work_search?type=3"
+                           style="height: 30px; line-height: 25px; width: 87px;">金融</a></li>
+                    <li><a href="/jobseeker/work_search?type=4" style="height: 30px; line-height: 25px;">消费品</a></li>
+                    <li><a href="/jobseeker/work_search?type=5" style="height: 30px; line-height: 25px;">汽车·制造</a></li>
+                    <li><a href="/jobseeker/work_search?type=6" style="height: 30px; line-height: 25px;">医疗·化工</a></li>
+                </ul>
+            </li>
+            <li><a href="/jobseeker/guide">就业指南</a></li>
+            <li><a href="/jobseeker/job_fair">招聘会</a></li>
+            <li><a href="/jobseeker/part_time_job">兼职天地</a></li>
+            <!-- <li><a href="">简历</a></li> -->
+        </ul>
+        <!-- <ul class="topnav toprightnav r">
+            <li class="r"><a href="">我是{{userType}}</a></li>
+            <li class="r"><a onclick=""><i class="fa fa-user-circle"></i></a></li>
+        </ul> -->
+    </div>
+</div>
+<div class="wp">
+    <!-- -fluid -->
+
+
+    <div style="text-align: center;padding: 20px 30px 30px;
+        border: 1px #3d9ccc solid;
+        border-top: 5px solid #3d9ccc;
+        margin: 10px 0;">
+
+
+        <div id="formWork">
+            <section class="page-title clearfix ">
+                <h3>
+                    填写个人信息
+                    <em class="tips-required "> <i></i></em>
+                </h3>
+            </section>
+            <!-- 工作经历 -->
+            <section class="edu-exp" id="work">
+                <h3 class="info-title ">
+                    <i class="icons24 icons24-work-exp"></i> 个人资料 <span></span>
+                </h3>
+                <!-- <div class="work-exp-content " data-selector="work-exp-content "> -->
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">姓名:</span>
+                    </div>
+                    <input type="text" class="form-control" id="name" v-bind:data="work.name" v-bind:value="work.name">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">毕业院校:</span>
+                    </div>
+                    <input type="text" class="form-control" id="graduated" v-bind:data="work.college"
+                           v-bind:value="work.college">
+                </div>
+                <!--{"name":"小明","college":"河北工业大学","education":"大学","major":"软件工程","birthday":"2000-12-02","work":"无"}-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">学历:</span>
+                    </div>
+                    <select class="form-control" id="education" v-bind:data="work.education">
+
+                        <option>中专</option>
+                        <option>大专</option>
+                        <option>本科</option>
+                        <option>硕士</option>
+                        <option>博士</option>
+                        <!--<option selected="selected">sadas</option>-->
+                    </select>
+                    <!-- <input type="text" class="form-control" id="qualifications"> -->
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">专业:</span>
+                    </div>
+                    <input type="text" class="form-control" id="major" v-bind:data="work.major"
+                           v-bind:value="work.major">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">出生日期:</span>
+                    </div>
+                    <input type="date" class="form-control" id="DateOfBirth" v-bind:data="work.birthday"
+                           v-bind:value="work.birthday">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">工作经历:</span>
+                    </div>
+                    <textarea type="textarea" rows="3" class="form-control" id="experience" v-bind:data="work.work"
+                              v-bind:value="work.work"></textarea>
+                </div>
+
+
+                <!-- </div> -->
+            </section>
+            <!-- 教育经历 -->
+            <section class="edu-exp" id="seek">
+                <h3 class="info-title ">
+                    <i class="icons24 icons24-edu-exp "></i> 求职意向 <span></span>
+                </h3>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">期望行业:</span>
+                    </div>
+                    <select class="form-control" id="industry" v-bind:data="seek.desired_industry">
+                        <option>IT·互联网</option>
+                        <option>房地产</option>
+                        <option>金融</option>
+                        <option>消费品</option>
+                        <option>汽车·制造</option>
+                        <option>医疗·化工</option>
+                    </select>
+
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">期望职能:</span>
+                    </div>
+                    <input type="text" class="form-control" id="industry_job" v-bind:data="seek.desired_job"
+                           v-bind:value="seek.desired_job">
+                </div>
+                <!--{"annual_salary":"10万元","desired_industry":"互联网","desired_location":"石家庄","desired_job":"算法工程师"}-->
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">期望地点:</span>
+                    </div>
+                    <input type="text" class="form-control" id="place" v-bind:data="seek.desired_location"
+                           v-bind:value="seek.desired_location">
+                    <!-- <input type="text" class="form-control" id="qualifications"> -->
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn-primary input-group-text">期望年薪:</span>
+                    </div>
+                    <input type="text" class="form-control" id="salary" v-bind:data="seek.annual_salary"
+                           v-bind:value="seek.annual_salary">
+                </div>
+
+            </section>
+            <div class="btn-box ">
+                <button class="btn btn-large btn-primary" id="finish" onclick="send();">完成</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--#set var='compatible' value=''-->
+<link rel="stylesheet " href="https://concat.lietou-static.com/fe-c-pc/v5/css/common/footer.15139a62.css">
+<footer id="footer-p-beta2">
+    <hr>
+    <div class="wrap">
+        <div class="copyright">
+            <div class="copy-side">
+                服务热线 (免长话费)<br><strong>400-882-3823</strong><br>
+                <small>工作日 9:00-19:00</small>
+            </div>
+            <div class="copy-main">
+                <div class="item">
+                    <dl>
+                        <dt>投资者关系</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">公司简介</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">信息披露</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">企业管制</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">投资者关系联络</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>帮助</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">经理人帮助</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户注册</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于您的简历</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于猎头</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于职位</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>共赢</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">网站合作</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户协议</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">网站地图</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">意见反馈</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">加入钐椋网</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>导航</dt>
+                        <dd><a href="" target="_blank">猎聘天津</a></dd>
+                        <dd><a href="" target="_blank">全部招聘</a></dd>
+                        <dd><a href="" target="_blank">职位大全</a></dd>
+                        <dd><a href="" target="_blank">招聘职位</a></dd>
+                        <dd><a href="" target="_blank">企业名录</a></dd>
+                        <dd><a href="" target="_blank">城市列表</a></dd>
+                    </dl>
+                </div>
+                <div class="item item-weibo">
+                    <a href="" target="_blank" rel="nofollow"><i class="weibo"></i></a>
+                    <p>钐椋微博</p>
+                    <a class="btn-sina" href="" target="_blank" rel="nofollow"></a>
+                </div>
+                <div class="item item-apps">
+                    <i class="mishu" style="background: url(/static/images/mishu.png) no-repeat; background-size: 100%;"></i>
+                    <p>钐椋微信</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-footer">
+        <p>京ICP备12345678号 合字2B-20181226 人才服务许可证:123456789101号
+            <a class="police-record" href="">
+                <img src="">
+                <span>京公网安备 12345678901112号</span>
+            </a>
+        </p>
+        <p>Copyright © 2006-2018 shanliang.com All Rights Reserved</p>
+    </div>
+</footer>
+<script src="../../static/JS/api.js"></script>
+<script>
+    var $j = jQuery.noConflict();
+    var flag = "";
+    $j(document).ready(function () {
+        // $j("#btn1").click(function(){
+        //     alert("Text: " + $j("#test").text());
+        // });
+        getData();
+    });
+    // $j(document).ready(function(){
+    //    getData();
+    // });
+
+    //cookie
+
+
+    // {"data":{"personal":{"name":"小明","college":"河北工业大学","education":"大学","major":"软件工程","birthday":"2000-12-02","work":"无"},"intension":{"annual_salary":"10万元","desired_industry":"互联网","desired_location":"石家庄","desired_job":"算法工程师"}},"status":"OK"}
+    function getData() {
+
+        var email = "123456@qq.com";
+        $j.post("http://localhost:8080/getData",
+            {
+                // email:"1234567@qq.com"
+            }, function (data) {
+                console.log(data);
+                data = JSON.parse(data);
+                if (data.status == "OK") {
+                    var vue1 = null;
+                    var vue2 = null;
+                    // vue1.$data.work="";
+                    // var data;
+                    // data=new Object();
+                    // data.data=new Array();
+                    // data.data[0]="1";
+                    // data.data[1]="1";
+                    if (data.data.personal == "") {//个人资料为空
+
+                    } else {
+                        // {"name":"小明","college":"河北工业大学","education":"大学","major":"软件工程","birthday":"2000-12-02","work":"无"}
+
+                        vue1 = new Vue({
+                            el: "#work",
+                            data: {
+                                work: {
+                                    // name:"石凯峰",//姓名
+                                    // graduated:"河北工业大学",//毕业院校
+                                    // qualifications:"本科",//学历
+                                    // major:"软件工程",//专业
+                                    // DateOfBirth:"2018-12-27",//出生日期
+                                    // experience:"无"//工作经历
+                                }
+
+                            }
+                        });
+                        vue1.$data.work = data.data.personal;
+                        for (var i = 0; i < $S.byId("education").length; i++) {
+                            if ($S.eq($S.byId("education"), i + 1).innerHTML == vue1.$data.work.education) {
+
+                                $S.attr($S.eq($S.byId("education"), i + 1), 'selected', 'selected');
+                                break;
+                            }
+                        }
+                    }
+
+                    if (data.data.intension == "") {//职业意向为空
+
+                    } else {
+                        vue2 = new Vue({
+                            el: "#seek",
+                            data: {
+                                seek: {
+                                    // industry:"消费品",
+                                    // industry_job:"产品经理",
+                                    // place:"北京、上海",
+                                    // salary:"20万"
+                                }
+                            }
+                        });
+                        vue2.$data.seek = data.data.intension;
+                        for (var i = 0; i < $S.byId("industry").length; i++) {
+                            if ($S.eq($S.byId("industry"), i + 1).innerHTML == vue2.$data.seek.desired_industry) {
+
+                                $S.attr($S.eq($S.byId("industry"), i + 1), 'selected', 'selected');
+                                break;
+                            }
+                        }
+                    }
+
+                    flag = "update";
+                    //     }else{
+                    //         alert("请求失败!");
+                    //     }
+                    // });
+                } else if (data.status == "NULL") {
+                    flag = "insert";
+                }
+                else {
+                    spop({
+                        template: '<h4 class="spop-title">请求失败</h4>',
+                        position: 'top-center',
+                        style: 'error',
+                        autoclose: 5000
+                    });
+                }
+            });
+    }
+
+    // name:"石凯峰",//姓名
+    //     graduated:"河北工业大学",//毕业院校
+    //     qualifications:"本科",//学历
+    //     major:"软件工程",//专业
+    //     DateOfBirth:"2018-12-27",//出生日期
+    //     experience:"无"//工作经历
+
+    // industry:"消费品",
+    //     industry_job:"产品经理",
+    //     place:"北京、上海",
+    //     salary:"20万"
+
+
+    // $S.byId("finish")
+
+    // $S.byId('formWork').addEventListener('submit',function(e){
+    //     if($S.byId("name").value==""){
+    //
+    //         e.preventDefault();
+    //         alert("姓名不能为空");
+    //
+    //         return;
+    //     }
+    //     if($S.byId("graduated").value==""){
+    //         e.preventDefault();
+    //         layer.msg('毕业院校不能为空!', {
+    //             time: 0 //不自动关闭
+    //             , btn: ["是"]
+    //             , yes: function (index) {
+    //                 layer.close(index);
+    //                 // layer.msg('操作成功');
+    //             }
+    //         });
+    //
+    //         return;
+    //     }
+    //     if($S.byId("major").value==""){
+    //         e.preventDefault();
+    //         layer.msg('专业不能为空!', {
+    //             time: 0 //不自动关闭
+    //             , btn: ["是"]
+    //             , yes: function (index) {
+    //                 layer.close(index);
+    //                 // layer.msg('操作成功');
+    //             }
+    //         });
+    //
+    //         return;
+    //     }
+    //     if($S.byId("DateOfBirth").value==""){
+    //         e.preventDefault();
+    //         layer.msg('出生日期不能为空!', {
+    //             time: 0 //不自动关闭
+    //             , btn: ["是"]
+    //             , yes: function (index) {
+    //                 layer.close(index);
+    //                 // layer.msg('操作成功');
+    //             }
+    //         });
+    //
+    //         return;
+    //     }
+    //     if($S.byId("industry_job").value==""){
+    //         e.preventDefault();
+    //         layer.msg('期望职能不能为空!', {
+    //             time: 0 //不自动关闭
+    //             , btn: ["是"]
+    //             , yes: function (index) {
+    //                 layer.close(index);
+    //                 // layer.msg('操作成功');
+    //             }
+    //         });
+    //
+    //         return;
+    //     }
+    //     if($S.byId("place").value==""){
+    //         e.preventDefault();
+    //         layer.msg('期望地点不能为空!', {
+    //             time: 0 //不自动关闭
+    //             , btn: ["是"]
+    //             , yes: function (index) {
+    //                 layer.close(index);
+    //                 // layer.msg('操作成功');
+    //             }
+    //         });
+    //
+    //         return;
+    //     }
+    //     if($S.byId("salary").value==""){
+    //         e.preventDefault();
+    //         layer.msg('期望年薪不能为空!', {
+    //             time: 0 //不自动关闭
+    //             , btn: ["是"]
+    //             , yes: function (index) {
+    //                 layer.close(index);
+    //                 // layer.msg('操作成功');
+    //             }
+    //         });
+    //
+    //         return;
+    //     }
+    //
+    //     var url="";
+    //     // {"data":{"personal":{
+    //     // "name":"小明",
+    //     // "college":"河北工业大学",
+    //     // "education":"本科",
+    //     // "major":"软件工程",
+    //     // "birthday":"2000-12-02",
+    //     // "work":"无"},
+    //     // "intension":{
+    //     // "annual_salary":"10万元",
+    //     // "desired_industry":"互联网",
+    //     // "desired_location":"石家庄",
+    //     // "desired_job":"算法工程师"}},"status":"OK"}
+    //
+    //
+    //
+    //
+    //     e.preventDefault();
+    //     send();
+    //     return;
+    //     // alert($S.byId("DateOfBirth").value);
+    // },false);
+    function send() {
+
+
+        if ($S.byId("name").value == "") {
+
+            layer.msg('姓名不能为空!', {
+                time: 0 //不自动关闭
+                , btn: ["是"]
+                , yes: function (index) {
+                    layer.close(index);
+                    // layer.msg('操作成功');
+                }
+            });
+            // alert("姓名不能为空");
+            return;
+        }
+        if ($S.byId("graduated").value == "") {
+
+            layer.msg('毕业院校不能为空!', {
+                time: 0 //不自动关闭
+                , btn: ["是"]
+                , yes: function (index) {
+                    layer.close(index);
+                    // layer.msg('操作成功');
+                }
+            });
+
+            return;
+        }
+        if ($S.byId("major").value == "") {
+
+            layer.msg('专业不能为空!', {
+                time: 0 //不自动关闭
+                , btn: ["是"]
+                , yes: function (index) {
+                    layer.close(index);
+                    // layer.msg('操作成功');
+                }
+            });
+
+            return;
+        }
+        if ($S.byId("DateOfBirth").value == "") {
+
+            layer.msg('出生日期不能为空!', {
+                time: 0 //不自动关闭
+                , btn: ["是"]
+                , yes: function (index) {
+                    layer.close(index);
+                    // layer.msg('操作成功');
+                }
+            });
+
+            return;
+        }
+        if ($S.byId("industry_job").value == "") {
+
+            layer.msg('期望职能不能为空!', {
+                time: 0 //不自动关闭
+                , btn: ["是"]
+                , yes: function (index) {
+                    layer.close(index);
+                    // layer.msg('操作成功');
+                }
+            });
+
+            return;
+        }
+        if ($S.byId("place").value == "") {
+
+            layer.msg('期望地点不能为空!', {
+                time: 0 //不自动关闭
+                , btn: ["是"]
+                , yes: function (index) {
+                    layer.close(index);
+                    // layer.msg('操作成功');
+                }
+            });
+
+            return;
+        }
+        if ($S.byId("salary").value == "") {
+
+            layer.msg('期望年薪不能为空!', {
+                time: 0 //不自动关闭
+                , btn: ["是"]
+                , yes: function (index) {
+                    layer.close(index);
+                    // layer.msg('操作成功');
+                }
+            });
+
+            return;
+        }
+
+        var url = "";
+        // {"data":{"personal":{
+        // "name":"小明",
+        // "college":"河北工业大学",
+        // "education":"本科",
+        // "major":"软件工程",
+        // "birthday":"2000-12-02",
+        // "work":"无"},
+        // "intension":{
+        // "annual_salary":"10万元",
+        // "desired_industry":"互联网",
+        // "desired_location":"石家庄",
+        // "desired_job":"算法工程师"}},"status":"OK"}
+
+
+        if (flag == "update") {
+            var temp = "";
+            var temp1 = "";
+            if ($S.byId("name").value != $S.attr($S.byId("name"), "data")) {
+                temp = "1";
+            }
+            if ($S.byId("graduated").value != $S.attr($S.byId("graduated"), "data")) {
+                temp = "2";
+            }
+            if ($S.byId("education").value != $S.attr($S.byId("education"), "data")) {
+                temp = "3";
+            }
+            if ($S.byId("major").value != $S.attr($S.byId("major"), "data")) {
+                temp = "4";
+            }
+            if ($S.byId("DateOfBirth").value != $S.attr($S.byId("DateOfBirth"), "data")) {
+                temp = "5";
+            }
+            if ($S.byId("experience").value != $S.attr($S.byId("experience"), "data")) {
+                temp = "6";
+            }
+            if ($S.byId("salary").value != $S.attr($S.byId("salary"), "data")) {
+                temp = "7";
+            }
+            if ($S.byId("industry").value != $S.attr($S.byId("industry"), "data")) {
+                temp = "8";
+            }
+            if ($S.byId("place").value != $S.attr($S.byId("place"), "data")) {
+                temp = "9";
+            }
+            if ($S.byId("industry_job").value != $S.attr($S.byId("industry_job"), "data")) {
+                temp = "10";
+            }
+            // alert(temp);
+            if (temp == "") {
+                // alert("更新成功!");
+                spop({
+                    template: '<h4 class="spop-title">更新成功</h4>',
+                    position: 'top-center',
+                    style: 'success',
+                    autoclose: 3000
+                });
+                return;
+            }
+            // alert("阿斯达萨达多所做大所");
+            $j.post("http://localhost:8080/setData",
+                {
+                    // email:"1234567@qq.com",
+                    name: $S.byId("name").value,//姓名
+                    college: $S.byId("graduated").value,//毕业院校
+                    education: $S.byId("education").value,//学历
+                    major: $S.byId("major").value,//专业
+                    birthday: $S.byId("DateOfBirth").value,//出生日期
+                    work: $S.byId("experience").value,//工作经历
+                    annual_salary: $S.byId("salary").value,//期望年薪
+                    desired_industry: $S.byId("industry").value,//期望行业
+                    desired_location: $S.byId("place").value,//期望地点
+                    desired_job: $S.byId("industry_job").value,//期望职能
+                    flag: "update"
+
+                },
+                function (data) {
+                    // alert("数据: \n" + data + "\n状态: " + status);
+
+                    // alert(data);
+                    data = JSON.parse(data);
+                    if (data.status == "OK") {
+                        // alert("更新成功!");
+                        spop({
+                            template: '<h4 class="spop-title">更新成功</h4>',
+                            position: 'top-center',
+                            style: 'success',
+                            autoclose: 3000
+                        });
+
+                    } else {
+                        // alert("更新失败!");
+                        var dataReason = data.reason;
+                        if (data.reason == "" || typeof (data.reason) == "undefined") {
+                            dataReason = "网络连接错误，请稍后重试";
+                        }
+                        spop({
+                            template: '<h4 class="spop-title">更新失败</h4>' + dataReason,
+                            position: 'top-center',
+                            style: 'error',
+                            autoclose: 5000
+                        });
+                    }
+
+
+                });
+            // alert($S.byId("salary").value);
+            console.log($S.byId("education").value);
+            console.log($S.attr($S.byId("education"), "data"));
+        } else {
+            $j.post("http://localhost:8080/setData",
+                {
+                    // email:"1234567@qq.com",
+                    name: $S.byId("name").value,//姓名
+                    college: $S.byId("graduated").value,//毕业院校
+                    education: $S.byId("education").value,//学历
+                    major: $S.byId("major").value,//专业
+                    birthday: $S.byId("DateOfBirth").value,//出生日期
+                    work: $S.byId("experience").value,//工作经历
+                    annual_salary: $S.byId("salary").value,//期望年薪
+                    desired_industry: $S.byId("industry").value,//期望行业
+                    desired_location: $S.byId("place").value,//期望地点
+                    desired_job: $S.byId("industry_job").value,//期望职能
+                    flag: "insert"
+
+                },
+                function (data) {
+                    // alert("数据: \n" + data + "\n状态: " + status);
+
+                    // alert(data);
+                    data = JSON.parse(data);
+                    if (data.status == "OK") {
+                        // alert("插入成功!");
+                        spop({
+                            template: '<h4 class="spop-title">插入成功</h4>',
+                            position: 'top-center',
+                            style: 'success',
+                            autoclose: 3000
+                        });
+                        flag="update";
+                    } else {
+                        // alert("插入失败!");
+                        var dataReason = data.reason;
+                        if (data.reason == "" || typeof (data.reason) == "undefined") {
+                            dataReason = "网络连接错误，请稍后重试";
+                        }
+                        spop({
+                            template: '<h4 class="spop-title">插入失败</h4>' + dataReason,
+                            position: 'top-center',
+                            style: 'error',
+                            autoclose: 5000
+                        });
+                    }
+
+
+                });
+        }
+    }
+</script>
+
+
+</body>
+
+</html>

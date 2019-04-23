@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/homepageStyle.css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="../resources/bootstrap/css/bootstrap.min.css">-->
+</head>
+
+<body>
+<div class="topbar">
+    <div class="wp">
+        <a href="" class="logo l"></a>
+        <ul id="nav" class="topnav topleftnav l">
+            <li><a href="homepage.html">首页</a></li>
+            <li class="current"><a href="">发布招聘</a></li>
+            <!-- <li><a href="">简历</a></li> -->
+        </ul>
+        <ul class="topnav toprightnav r">
+            <!-- <li class="r"><a href="">我是{{userType}}</a></li> -->
+            <li class="r"><a onclick=""><i class="fa fa-user-circle"></i></a></li>
+        </ul>
+    </div>
+</div>
+<div class="wp mt-3">
+
+    <form action="#" method="POST" id="form">
+        <div class="page-title clearfix">
+            <h3>
+                完善招聘信息
+                <em class="tips-required "> 必填<i></i></em>
+            </h3>
+        </div>
+        <div id="input-div" style="height: 615px; margin-bottom: 30px;">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">职位名称</span>
+                </div>
+                <input type="text" class="form-control" placeholder="请输入职位名称" name="job" id="job">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">年<span class="span1"></span>薪</span>
+                </div>
+                <input type="text" class="form-control" placeholder="请输入年薪" name="salary" id="salary">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">工作地点</span>
+                </div>
+                <input type="text" class="form-control" placeholder="请输入工作地点" name="location" id="location">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">工作经验</span>
+                </div>
+                <input type="text" class="form-control" placeholder="请输入工作经验" name="experience" id="experience">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">要求学历</span>
+                </div>
+                <select name="education" style="padding: .375rem .75rem; font-size: 1rem; line-height: 1.5;">
+                    <option>初中以上</option>
+                    <option>高中以上</option>
+                    <option>大学本科以上</option>
+                    <option>硕士以上</option>
+                    <option>博士以上</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" style="border-radius: .25rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">职位描述</span>
+                </div>
+                <textarea name="job_info"  placeholder="请输入职位描述" id="job_info" style="padding: .375rem .75rem; font-size: 1rem; line-height: 1.5;"></textarea>
+            </div>
+            <!--- 发布时间 js 获取 -->
+            <button type="submit" class="btn btn-primary">提交</button>
+        </div>
+    </form>
+</div>
+<script src="/static/JS/company-publish.js"></script>
+
+</body>
+
+</html>

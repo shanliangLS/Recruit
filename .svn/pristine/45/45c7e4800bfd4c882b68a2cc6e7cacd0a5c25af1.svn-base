@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "test.user",
+      "type": "com.recruit.entity.User",
+      "sourceType": "com.recruit.entity.User"
+    }
+  ],
+  "properties": [
+    {
+      "name": "test.user.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.recruit.entity.User",
+      "defaultValue": 0
+    },
+    {
+      "name": "test.user.username",
+      "type": "java.lang.String",
+      "sourceType": "com.recruit.entity.User"
+    }
+  ],
+  "hints": []
+}

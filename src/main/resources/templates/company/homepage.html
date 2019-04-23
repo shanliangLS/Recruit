@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/homepageStyle.css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="resources/commentCSS/imgVarStyle.css"> -->
+
+    <script type="text/javascript" src="/static/JQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/commentJS/vue.min.js"></script>
+    <script type="text/javascript" src="/static/layer/layer.js"></script>
+    <!-- <script type="text/javascript" src="resources/commentJS/img_ver.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="resources/CSS/sign-up-login.css">
+    <link rel="stylesheet" href="resources/CSS/tooltips.css" />
+    <link rel="stylesheet" href="resources/CSS/spop.min.css" />
+    <script src="resources/JS/jquery.pure.tooltips.js"></script>
+    <script src="resources/JS/spop.min.js"></script> -->
+
+    <style>
+
+    </style>
+
+</head>
+<body style="background-color: #e6e6e6;">
+
+<div class="topbar">
+    <div class="wp">
+        <a href="" class="logo l"></a>
+        <ul id="nav" class="topnav topleftnav l">
+            <li class="current"><a href="">首页</a></li>
+            <li><a href="recruitment.html">发布招聘</a></li>
+            <!-- <li><a href="">简历</a></li> -->
+        </ul>
+        <ul class="topnav toprightnav r">
+            <!-- <li class="r"><a href="">我是{{userType}}</a></li> -->
+            <li class="r"><a onclick=""><i class="fa fa-user-circle"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="wp">
+    <div class="left_section">
+        <div class="resume_pannel">
+            <ul class="nav nav-tabs resume_pannel_title">
+                <li class="active"><a data-toggle="tab" href="#resume_pannel1" onfocus="this.blur();">未处理简历</a></li>
+                <li><a data-toggle="tab" href="#resume_pannel2" onfocus="this.blur();">已通过简历</a></li>
+                <li><a data-toggle="tab" href="#resume_pannel3" onfocus="this.blur();">全部简历</a></li>
+                <!-- <li><a data-toggle="tab" href="#menu3">菜单 3</a></li> -->
+            </ul>
+
+            <div class="tab-content">
+                <!-- 未处理简历 -->
+
+                <div id="resume_pannel1" class="tab-pane fade in active">
+                    <template v-for="resume in resumes">
+                        <div class="resume">
+                            <div class="sojob_item_main">
+                                <a class="job_info jobseeker_info" target="" href="javascript:void(0);">
+                                    <h3>{{resume.name}}</h3>
+                                    <p class="condition clearfix">
+                                        <span class="text_warning">{{resume.experience}}</span>
+                                        <span>{{resume.college}}</span>
+                                        <span>{{resume.major}}</span>
+                                        <span>{{resume.education}}</span>
+                                    </p>
+                                    <p class="time_info clearfix">
+                                        <time>{{resume.time}}</time>
+                                    </p>
+                                </a>
+                                <div class="company-info btn_job_pass" align="center">
+                                    <a target="_blank" class="nohover">
+                                        <p class="job-name">{{resume.job_name}}</p>
+                                        <button type="button" class="btn btn-primary btn_pass" onclick="do_pass()"
+                                                style="display: block;">
+                                            通过
+                                        </button>
+                                        <button type="button" class="btn btn-warning btn_pass" onclick="do_not_pass()"
+                                                style="display: block;">
+                                            不通过
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- 已通过简历 -->
+                <div id="resume_pannel2" class="tab-pane fade">
+                    <template v-for="resume2 in resumes">
+                        <div class="resume">
+                            <i class="icon_triangle icon_blue_triangle">
+                                <b class="icon_triangle_b">过</b>
+                            </i>
+                            <div class="sojob_item_main">
+                                <a class="job_info jobseeker_info" target="_blank" href="javascript:void(0);">
+                                    <h3>{{resume2.name}}</h3>
+                                    <p class="condition clearfix">
+                                        <span class="text_warning">{{resume2.experience}}</span>
+                                        <span>{{resume2.college}}</span>
+                                        <span>{{resume2.major}}</span>
+                                        <span>{{resume2.education}}</span>
+                                    </p>
+                                    <p class="time_info clearfix">
+                                        <time>{{resume2.time}}</time>
+                                    </p>
+                                </a>
+                                <div class="company-info btn_job_pass" align="center">
+                                    <a target="_blank" class="nohover">
+                                        <p class="job-name" style="margin-top: 35px;">{{resume2.job_name}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </template>
+                </div>
+
+                <!-- 全部简历 -->
+                <div id="resume_pannel3" class="tab-pane fade">
+                    <div id="resume_pannel3_1" class="tab-pane fade in active">
+                        <template v-for="resume in resumes">
+                            <div class="resume">
+                                <div class="sojob_item_main">
+                                    <a class="job_info jobseeker_info" target="_blank" href="javascript:void(0);">
+                                        <h3>{{resume.name}}</h3>
+                                        <p class="condition clearfix">
+                                            <span class="text_warning">{{resume.experience}}</span>
+                                            <span>{{resume.college}}</span>
+                                            <span>{{resume.major}}</span>
+                                            <span>{{resume.education}}</span>
+                                        </p>
+                                        <p class="time_info clearfix">
+                                            <time>{{resume.time}}</time>
+                                        </p>
+                                    </a>
+                                    <div class="company-info btn_job_pass" align="center">
+                                        <a target="_blank" class="nohover">
+                                            <p class="job-name">{{resume.job_name}}</p>
+                                            <button type="button" class="btn btn-primary btn_pass" onclick="do_pass()"
+                                                    style="display: block;">
+                                                通过
+                                            </button>
+                                            <button type="button" class="btn btn-warning btn_pass"
+                                                    onclick="do_not_pass()" style="display: block;">
+                                                不通过
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                    <div id="resume_pannel3_2" class="tab-pane fade in active">
+                        <template v-for="resume in resumes">
+                            <div class="resume">
+                                <i class="icon_triangle icon_blue_triangle">
+                                    <b class="icon_triangle_b">过</b>
+                                </i>
+                                <div class="sojob_item_main">
+                                    <a class="job_info jobseeker_info" target="_blank" href="javascript:void(0);">
+                                        <h3>{{resume.name}}</h3>
+                                        <p class="condition clearfix">
+                                            <span class="text_warning">{{resume.experience}}</span>
+                                            <span>{{resume.college}}</span>
+                                            <span>{{resume.major}}</span>
+                                            <span>{{resume.education}}</span>
+                                        </p>
+                                        <p class="time_info clearfix">
+                                            <time>{{resume.time}}</time>
+                                        </p>
+                                    </a>
+                                    <div class="company-info btn_job_pass" align="center">
+                                        <a title="{{resume.job_name}}" target="_blank" class="nohover">
+                                            <p class="job-name" style="margin-top: 35px;">{{resume.job_name}}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </template>
+                    </div>
+                    <div id="resume_pannel3_3" class="tab-pane fade in active">
+                        <template v-for="resume in resumes">
+                            <div class="resume">
+                                <i class="icon_triangle">
+                                    <b class="icon_triangle_b">驳</b>
+                                </i>
+                                <div class="sojob_item_main">
+                                    <a class="job_info jobseeker_info" target="_blank" href="javascript:void(0);">
+                                        <h3>{{resume.name}}</h3>
+                                        <p class="condition clearfix">
+                                            <span class="text_warning">{{resume.experience}}</span>
+                                            <span>{{resume.college}}</span>
+                                            <span>{{resume.major}}</span>
+                                            <span>{{resume.education}}</span>
+                                        </p>
+                                        <p class="time_info clearfix">
+                                            <time>{{resume.time}}</time>
+                                        </p>
+                                    </a>
+                                    <div class="company-info btn_job_pass" align="center">
+                                        <a target="_blank" class="nohover">
+                                            <p class="job-name" style="margin-top: 35px;">{{resume.job_name}}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- <div id="menu3" class="tab-pane fade">
+                    <h3>菜单 3</h3>
+                    <p>这是菜单 3 显示的内容。这是菜单 3 显示的内容。这是菜单 3 显示的内容。</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-c-pc/v5/css/common/common.a9b13f24.css">
+    <link rel="stylesheet" href=" https://concat.lietou-static.com/fe-c-pc/v5/css/pages/home.8e9d3d23.css">
+    <div class="right_section" id="home">
+        <div class="side" style="background-color: #fff; width: 290px;">
+            <div class="box-primary box-golden-card unvip" data-selector="userInfomation"
+                 style="width: 290px; margin-bottom: 0;">
+                <div class="clearfix" align="center">
+                    <div class="user-photo" style="float: none; width: 200px;">
+                        <img class="normalFace"
+                             src="https://image0.lietou-static.com/big_/5bfe906874719d35745aa19803a.png"
+                             style="width: 100%;">
+                    </div>
+                    <div id="company_info" class="user-info" style="float: none; width: 200px;">
+                        <div><span>{{company.name}}</span></div>
+                        <p style="width: auto;">{{company.linkman}}</p>
+                        <!--<p style="width: auto;">集团管理员</p>-->
+                    </div>
+                </div>
+                <div class="credit-cabinet">
+                    <!--<h3>职场待遇分：<span class="text-warning">985</span></h3>-->
+                    <div class="credit-cabinet-content">
+                        <!--<div class="credit-rate">-->
+                            <!--<div class="credit-rate-point" style="width: 99%;"></div>-->
+                        <!--</div>-->
+                        <!--<p>已经打败<span class="text-warning">99%</span>的同行</p>-->
+                    </div>
+                </div>
+
+                <div class="user-status">
+                    <ul class="clearfix">
+                        <!-- <li><a href="resume.html"work_search.html class="icons24 icons24-editing"><span>编辑简历</span></a></li> -->
+                        <li><a href="https://c.liepin.com/profile/getsecret/?sfrom=c_index" target="_blank"
+                               class="icons24 icons24-set"><span>帐号设置</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    // var url = 'http://127.0.0.1:5000/translate';
+    // console.log(url);
+    // // AJAX提交信息
+    // $.ajax({
+    //     type: "get",
+    //     async: false,
+    //     url: url,
+    //     dataType: "jsonp",
+    //     jsonp: "callback",
+    //     success: function (data) {
+    //         console.log(data);
+    //     },
+    //     error: function (e) {
+    //         console.log(e);
+    //     }
+    // });
+    // 未处理
+    function get_resume0(resumes) {
+        var resume0 = new Array();
+        for (var i in resumes) {
+            var resume = resumes[i];
+            if (resume.status == '0') {
+                resume0.push(resume);
+            }
+        }
+        return resume0;
+    }
+
+    // 处理, 未通过
+    function get_resume1(resumes) {
+        var resume1 = new Array();
+        for (var i in resumes) {
+            var resume = resumes[i];
+            if (resume.status == '1') {
+                resume1.push(resume);
+            }
+        }
+        return resume1;
+    }
+
+    // 处理, 通过
+    function get_resume2(resumes) {
+        var resume2 = new Array();
+        for (var i in resumes) {
+            var resume = resumes[i];
+            if (resume.status == '2') {
+                resume2.push(resume);
+            }
+        }
+        return resume2;
+    }
+
+    function do_pass() {
+
+        layer.msg('是否通过该简历？', {
+            time: 0 //不自动关闭
+            , btn: ['是', '否']
+            , yes: function (index) {
+                layer.close(index);
+                layer.msg('操作成功');
+            }
+        });
+    }
+
+    function do_not_pass() {
+        layer.msg('是否拒绝该简历？', {
+            time: 0 //不自动关闭
+            , btn: ['是', '否']
+            , yes: function (index) {
+                layer.close(index);
+                layer.msg('操作成功');
+            }
+        });
+    }
+
+    var all_resume = [
+        {
+            name: '石凯峰',
+            job_name: '后台开发工程师',
+            experience: '3年以上',
+            college: '河北工业大学',
+            major: '软件工程',
+            education: '大学本科',
+            time: '2天前',
+            status: '0'
+        }, {
+            name: '石凯峰',
+            job_name: '后台开发工程师',
+            experience: '3年以上',
+            college: '河北工业大学',
+            major: '软件工程',
+            education: '大学本科',
+            time: '2天前',
+            status: '1'
+        }, {
+            name: '石凯峰',
+            job_name: '后台开发工程师',
+            experience: '3年以上',
+            college: '河北工业大学',
+            major: '软件工程',
+            education: '大学本科',
+            time: '2天前',
+            status: '2'
+        }, {
+            name: '石凯峰',
+            job_name: '后台开发工程师',
+            experience: '3年以上',
+            college: '河北工业大学',
+            major: '软件工程',
+            education: '大学本科',
+            time: '2天前',
+            status: '2'
+        }, {
+            name: '石凯峰',
+            job_name: '后台开发工程师',
+            experience: '3年以上',
+            college: '河北工业大学',
+            major: '软件工程',
+            education: '大学本科',
+            time: '2天前',
+            status: '2'
+        }
+    ];
+
+    var resume0 = get_resume0(all_resume);
+    var resume1 = get_resume1(all_resume);
+    var resume2 = get_resume2(all_resume);
+    // 未处理
+    new Vue({
+        el: '#resume_pannel1',
+        data: {
+            resumes: resume0
+        }
+    });
+    // 已通过
+    new Vue({
+        el: '#resume_pannel2',
+        data: {
+            resumes: resume2
+        }
+    });
+    // 全部-未处理
+    new Vue({
+        el: '#resume_pannel3_1',
+        data: {
+            resumes: resume0
+        }
+    });
+    // 全部-通过
+    new Vue({
+        el: '#resume_pannel3_2',
+        data: {
+            resumes: resume2
+        }
+    });
+    // 全部-拒绝
+    new Vue({
+        el: '#resume_pannel3_3',
+        data: {
+            resumes: resume1
+        }
+    });
+    var c_company = {
+        name: '腾讯科技有限公司',
+        linkman: '梁山'
+    };
+    new Vue({
+        el: '#company_info',
+        data: {
+            company: c_company
+        }
+    });
+</script>
+</body>
+</html>

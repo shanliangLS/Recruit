@@ -1,0 +1,153 @@
+.l{float:left!important;_display:inline}.r{float:right!important;_display:inline}.c{margin: auto!important;_display:inline}
+.text-l{text-align:left}.text-r{text-align:right}.text-c{text-align:center}
+.va-t{ vertical-align:top!important}.va-m{ vertical-align:middle!important}.va-b{ vertical-align:bottom!important}
+
+.wp{ width:960px; margin:0 auto}
+html,body,#container,.section{width:100%;height:100%}
+/*顶部*/
+.topbar{ top:0; left:0; right:0; width:100%; height:50px; background-color:rgba(48,58,64,1);z-index:9}
+	.logo{display:block; width:90px; height:50px; cursor:pointer; background:url(../images/LS.png) no-repeat 0 center; margin-right:20px}
+	.topnav{}
+	.toprightnav{width: 400px;}
+	.topnav li{ display:inline;}
+	.topnav li a{ display:inline-block; height:50px; line-height:50px; font-size:14px; color:#999; text-decoration:none; padding:0 15px}
+	.topnav li a:hover,.topnav li a.active,.topnav li.current a{ color:#2b2b2b; text-decoration:none; background-color:#faba00}
+	/*.userbar,.userbar a{ font-size:14px; line-height:50px; color:#a8a8a8; text-decoration:none}
+	.userbar a:hover{ color:#fff;}*/
+/*内容*/
+/*#container{min-width:980px}
+	.section{min-height:650px;background:repeat-x center center fixed;background-size:cover;overflow:hidden}
+	.section .wp{ position:relative; height:100%; display:table;}
+		.section .tuwen{display: table-cell;height:100%;overflow: hidden;vertical-align: middle}
+		.section .tuwennr{ padding:25px; width:440px; height:auto;background-color:rgba(0,0,0,0.8);}
+		#section-1{background-image:url(../images/1.jpg)}
+		#section-2{background-image:url(../images/2.jpg)}
+		#section-3{background-image:url(../images/3.jpg)}
+		#section-4{background-image:url(../images/4.jpg)}
+		#section-5{background-image:url(../images/5.jpg)}
+		#section-6{background-image:url(../images/6.jpg)}
+		#section-1 .tuwennr{ padding:0; margin:0 auto; width:622px; height:447px;background:url(../images/welcome.png) no-repeat 0 0}
+		.tuwen .title{ font-size:24px;font-weight:bold;color:#faba00}
+		.tuwen .info{ color:#fff; font-size:14px; line-height:24px; margin-top:25px}*/
+        /*表单*/
+		/*.tuwen .btnbar{ margin-top:25px;}
+		.tuwen .btnbar-c{padding-left: 105px;}
+		.tuwen .btn-form{ display:inline-block; width:104px; height:44px; line-height:44px; color:#faba00; font-size:16px;border:solid 2px #faba00; text-decoration:none;}
+		.paddingW{width:30px; display:inline-block;transition:width 0.2s linear 0s}
+		.tuwen .btn-form:hover{ background-color:#faba00; color:#2b2b2b}
+		.tuwen .btn-form:hover .paddingW{ width:40px;}
+		.tuwen .btn-no-border{border: none;}
+		.myform-group{display: block;margin-top: 20px;}
+        .myform-group label{position: absolute;width: 12.5%;font-size: 14px;line-height: 40px;text-align: right;color: white}
+        .myform-input-div{margin-left: 30%;margin-right: 30%}
+        .myform-input{width: 100%;padding-left: 10px;height: 38px;font-size: 14px;line-height: 38px;border: solid 1px #faba00;border-radius: 1px;}*/
+		
+/*页脚*/
+/*.Newfooter{ background-color:#2d2d2d;}
+.Newfooter .wp{padding:30px 0}
+	.copyright{ color:#666;}*/
+
+
+.hidden {
+	display: none;
+}
+
+.wrapper_width {
+	width: 400px;
+}
+.loginform_container {
+	margin-top: 0;
+    top: 50px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    position: relative;
+    max-width: 400px;
+    padding: 0;
+}
+.login_container {
+	overflow: hidden;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: aliceblue;
+}
+.input_group {
+	overflow: hidden;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+}
+.imgVar_group {
+	background: aliceblue;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+}
+.input_field {
+	display: inline-block;
+	padding: 12px 12px 12px 0px;
+    width: 80%;
+    background: transparent;
+    float: right;
+    border: none;
+    font-size: 15px;
+}
+.input_label {
+	float: left;
+	display: inline-block;
+    padding: 6px 0;
+    cursor: default;
+    text-align: center;
+	width: 44px;
+	height: 100%;
+    font-size: 20px;
+	background: #899dda;
+}
+.icon_hideo {
+	color: #fff;
+}
+
+.form_actions {
+	border-top: 1px solid #e4e4e4;
+    background-color: #f7f7f7;
+    padding: 15px 30px;
+    text-align: right;
+    font-size: 14px;
+    line-height: 14px;
+}
+.form_actions>a:hover {
+	color: #1a8fb4;
+	text-decoration-line: none;
+}
+.btn_link {
+	color: #aaa;
+	padding: 10px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: middle;
+}
+.btn {
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 14px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #1a8fb4;
+    cursor: pointer;
+}
+.btn:hover {
+	background-color: #00789d;
+}

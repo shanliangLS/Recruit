@@ -1,0 +1,45 @@
+package com.recruit.entity;
+
+import java.io.Serializable;
+
+public class User implements Serializable {
+
+    private int id;
+    private String email;
+    private String password;
+
+    public User() {
+    }
+
+    public User(int id, String email, String password) {
+        this.id = id;
+        this.email = email;
+        this.password = password;
+    }
+
+    // Getter、Setter
+
+    public int getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}

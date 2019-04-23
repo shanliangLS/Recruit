@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/static/commentCSS/tooltips.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/spop.min.css">
+    <!--#set var='compatible' value=''-->
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script type="text/javascript" src="/static/JQuery/jquery-3.3.1.min.js"></script>
+    <script src="/static/commentJS/jquery.pure.tooltips.js"></script>
+    <script type="text/javascript" src="/static/commentJS/spop.min.js"></script>
+
+    <!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+
+    <!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="dns-prefetch" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/header.297679f4.css">
+
+
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/common.27fbd75f.css">
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/message.60de58f3.css">
+
+    <link rel="stylesheet " href="https://concat.lietou-static.com/fe-c-pc/v5/css/pages/page.resume.b8894d6a.css">
+
+
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/headerStyle.css">
+    <!-- <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <script type="text/javascript" src="resources/JQuery/jquery-3.3.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="resources/bootstrap/js/bootstrap.js"></script> -->
+    <script src="../../static/commentJS/vue.min.js"></script>
+</head>
+<body style="background-color: #e6e6e6;">
+
+<div class="topbar">
+    <div class="wp">
+        <a href="" class="logo l"></a>
+        <ul id="nav" class="topnav topleftnav l">
+            <li><a href="/jobseeker/homepage">首页</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">企业招聘 <b class="caret"></b></a>
+                <ul class="dropdown-menu" style="margin-top: 16px; border-radius: 0 4px 4px 4px;">
+                    <li><a href="/jobseeker/work_search?type=1" style="height: 30px; line-height: 25px;">IT·互联网</a></li>
+                    <li><a href="/jobseeker/work_search?type=2" style="height: 30px; line-height: 25px;">房地产</a></li>
+                    <li><a href="/jobseeker/work_search?type=3" style="xheight: 30px; line-height: 25px;">金融</a></li>
+                    <li><a href="/jobseeker/work_search?type=4" style="height: 30px; line-height: 25px;">消费品</a></li>
+                    <li><a href="/jobseeker/work_search?type=5" style="height: 30px; line-height: 25px;">汽车·制造</a></li>
+                    <li><a href="/jobseeker/work_search?type=6" style="height: 30px; line-height: 25px;">医疗·化工</a></li>
+                </ul>
+            </li>
+            <li><a href="/jobseeker/guide">就业指南</a></li>
+            <li><a href="/jobseeker/job_fair">招聘会</a></li>
+            <li><a href="/jobseeker/part_time_job">兼职天地</a></li>
+            <!-- <li><a href="">简历</a></li> -->
+        </ul>
+    </div>
+</div>
+
+<div class="wp" style="text-align: center;">
+    <div id="formWork" style="text-align: center;">
+        <section class="page-title clearfix ">
+            <h3>
+                修改密码
+            </h3>
+        </section>
+        <!-- 工作经历 -->
+        <section class="edu-exp" id="work" style="text-align: center;">
+            <h3 class="info-title ">
+                <i class="icons24 icons24-work-exp"></i> 账号 <span></span>
+            </h3>
+
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="btn-primary input-group-text">新密码:</span>
+                </div>
+                <input type="password" class="form-control" id="password">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="btn-primary input-group-text">再输一遍新密码:</span>
+                </div>
+                <input type="password" class="form-control" id="repassword">
+            </div>
+
+            <div class="btn-box ">
+                <button class="btn btn-large btn-primary" id="finish" onclick="send();">完成</button>
+            </div>
+
+
+            <!-- </div> -->
+        </section>
+    </div>
+</div>
+<script src="../../static/JS/api.js"></script>
+<script>
+    function send() {
+        var password = $S.byId("password").value;
+        var repassword = $S.byId("repassword").value;
+        if (password == "") {
+            $S.byId("password").focus();
+            $.pt({
+                target: $("#password"),
+                position: 'r',
+                align: 't',
+                width: 'auto',
+                height: 'auto',
+                content: "密码不能为空"
+            });
+            return;
+        }
+        if (password.length < 6 || password.length > 20) {
+            $S.byId("password").focus();
+            $.pt({
+                target: $("#password"),
+                position: 'r',
+                align: 't',
+                width: 'auto',
+                height: 'auto',
+                content: "密码长度须在6位到20位之间"
+            });
+            return;
+        }
+        if (password != repassword) {
+            $S.byId("repassword").focus();
+            $.pt({
+                target: $("#repassword"),
+                position: 'r',
+                align: 't',
+                width: 'auto',
+                height: 'auto',
+                content: "两次输入的密码不一致"
+            });
+            return;
+        }
+        $.post("http://localhost:8080/repassword", {
+            password: password
+        }, function (data) {
+            data = JSON.parse(data);
+            if (data.status == "OK") {
+                spop({
+                    template: '<h4 class="spop-title">修改成功</h4>',
+                    position: 'top-center',
+                    style: 'success',
+                    autoclose: 3000
+                });
+            } else {
+                var dataReason = data.reason;
+                if (data.reason == "" || typeof (data.reason) == "undefined") {
+                    dataReason = "网络连接错误，请稍后重试";
+                }
+                spop({
+                    template: '<h4 class="spop-title">修改失败</h4>' + dataReason,
+                    position: 'top-center',
+                    style: 'error',
+                    autoclose: 5000
+                });
+            }
+        });
+    }
+</script>
+
+<!--#set var='compatible' value=''-->
+<link rel="stylesheet " href="https://concat.lietou-static.com/fe-c-pc/v5/css/common/footer.15139a62.css">
+<footer id="footer-p-beta2">
+    <hr>
+    <div class="wrap">
+        <div class="copyright">
+            <div class="copy-side">
+                服务热线 (免长话费)<br><strong>400-882-3823</strong><br>
+                <small>工作日 9:00-19:00</small>
+            </div>
+            <div class="copy-main">
+                <div class="item">
+                    <dl>
+                        <dt>投资者关系</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">公司简介</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">信息披露</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">企业管制</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">投资者关系联络</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>帮助</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">经理人帮助</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户注册</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于您的简历</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于猎头</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于职位</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>共赢</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">网站合作</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户协议</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">网站地图</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">意见反馈</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">加入钐椋网</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>导航</dt>
+                        <dd><a href="" target="_blank">猎聘天津</a></dd>
+                        <dd><a href="" target="_blank">全部招聘</a></dd>
+                        <dd><a href="" target="_blank">职位大全</a></dd>
+                        <dd><a href="" target="_blank">招聘职位</a></dd>
+                        <dd><a href="" target="_blank">企业名录</a></dd>
+                        <dd><a href="" target="_blank">城市列表</a></dd>
+                    </dl>
+                </div>
+                <div class="item item-weibo">
+                    <a href="" target="_blank" rel="nofollow"><i class="weibo"></i></a>
+                    <p>钐椋微博</p>
+                    <a class="btn-sina" href="" target="_blank" rel="nofollow"></a>
+                </div>
+                <div class="item item-apps">
+                    <i class="mishu" style="background: url(/static/images/mishu.png) no-repeat; background-size: 100%;"></i>
+                    <p>钐椋微信</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-footer">
+        <p>京ICP备12345678号 合字2B-20181226 人才服务许可证:123456789101号
+            <a class="police-record" href="">
+                <img src="">
+                <span>京公网安备 12345678901112号</span>
+            </a>
+        </p>
+        <p>Copyright © 2006-2018 shanliang.com All Rights Reserved</p>
+    </div>
+</footer>
+
+</body>
+</html>

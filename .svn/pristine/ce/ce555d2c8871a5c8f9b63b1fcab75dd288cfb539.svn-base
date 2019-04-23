@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册激活</title>
+    <style>
+        a {
+            width: 40px;
+            height: 24px;
+            display: inline-block;
+            background-color: #1E9FFF;
+            color: white;
+            padding: 4px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h3>欢迎注册招聘网</h3>
+<p>点击<a th:href="${activationUrl}" href="">激活</a>, 完成注册</p>
+</body>
+</html>

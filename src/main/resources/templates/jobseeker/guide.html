@@ -1,0 +1,309 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>就业指南</title>
+    <!--#set var='compatible' value=''-->
+    <!--<link rel="icon" href="http://concat.lietou-static.com/fe-www-pc/v5/static/favicon.ba1ac58f.ico" type="image/x-icon">-->
+    <!--<link rel="dns-prefetch" href="http://concat.lietou-static.com">-->
+
+
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/headerStyle.css">
+    <link rel="stylesheet" href="/static/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/commentCSS/spop.min.css">
+    <script type="text/javascript" src="/static/JQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/commentJS/vue.min.js"></script>
+    <script type="text/javascript" src="/static/layer/layer.js"></script>
+    <script type="text/javascript" src="/static/commentJS/spop.min.js"></script>
+
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/common.27fbd75f.css">
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/message.60de58f3.css">
+
+    <link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/pages/subsite.16d29b42.css">
+    <!-- https://concat.lietou-static.com/fe-www-pc/v5/css/pages/zhaopin.1018dc7f.css -->
+
+    <style>
+        .basic_infor > div {
+            display: inline-block;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+
+        .basic_infor > div > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .job_qualifications > span {
+            padding: 0 10px;
+            border-left: 2px solid #d0d0d0;
+            font-size: 16px;
+            line-height: 40px;
+        }
+
+        .sendResume > a {
+            float: right;
+            top: auto;
+            margin: 12px 16px 0 0;
+            width: 165px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            color: #ffffff;
+            background-color: #ffaa00;
+        }
+
+        .sendResume > a:hover {
+            text-decoration-line: none;
+            background-color: #fa9200;
+        }
+
+        .text-cut {
+            /*单行文字截断*/
+            max-width:500px;
+            display:block;/*内联对象需加*/
+            word-break:keep-all;/* 不换行 */
+            white-space:nowrap;/* 不换行 */
+            overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+            text-overflow:ellipsis;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="wp">
+        <a href="" class="logo l"></a>
+        <ul id="nav" class="topnav topleftnav l">
+            <li><a href="/jobseeker/homepage">首页</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">企业招聘 <b class="caret"></b></a>
+                <ul class="dropdown-menu" style="margin-top: 16px; border-radius: 0 4px 4px 4px;">
+                    <li><a href="/jobseeker/work_search?type=1" style="height: 30px; line-height: 25px;">IT·互联网</a></li>
+                    <li><a href="/jobseeker/work_search?type=2" style="height: 30px; line-height: 25px;">房地产</a></li>
+                    <li><a href="/jobseeker/work_search?type=3" style="height: 30px; line-height: 25px;">金融</a></li>
+                    <li><a href="/jobseeker/work_search?type=4" style="height: 30px; line-height: 25px;">消费品</a></li>
+                    <li><a href="/jobseeker/work_search?type=5" style="height: 30px; line-height: 25px;">汽车·制造</a></li>
+                    <li><a href="/jobseeker/work_search?type=6" style="height: 30px; line-height: 25px;">医疗·化工</a></li>
+                </ul>
+            </li>
+            <li class="current"><a href="/jobseeker/guide">就业指南</a></li>
+            <li><a href="/jobseeker/job_fair">招聘会</a></li>
+            <li><a href="/jobseeker/part_time_job">兼职天地</a></li>
+            <!-- <li><a href="">简历</a></li> -->
+        </ul>
+    </div>
+</div>
+
+
+<!--#set var='compatible' value=''-->
+
+<link rel="stylesheet" href="http://concat.lietou-static.com/fe-www-pc/v5/css/common/header.297679f4.css">
+<link rel="stylesheet" href="/static/CSS/zhaopin.1018dc7f.css">
+
+
+<div id="guide_list" style="margin-top: 25px;">
+
+    <div id="sojob">
+        <div class="container">
+
+            <div class="wrap">
+                <div class="job-content">
+
+                    <!-- 职位列表 begin -->
+                    <div class="sojob-result ">
+
+                        <!-- ********************** -->
+                        <ul class="zhaopin-sojob-list-a">
+
+                            <template v-for="guide in filteredGuides">
+                                <li v-on:click="guideArticle(guide)" style="padding: 10px 10px 10px 20px;">
+                                    <div class="sojob-item-main-a clearfix">
+                                        <div class="job-info" style="height: 25px; width: 500px;">
+                                            <a>
+                                                <h3 style="width: 500px;">
+                                                    <span class="text-cut" style="max-width: 500px;">{{ guide.title }}</span>
+                                                </h3>
+                                            </a>
+                                        </div>
+                                        <div class="company-info nohover" style="height: 25px;">
+                                            <p class="company-name" style="width: 100px;">
+                                                <a>{{ guide.time }}</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+
+                        </ul>
+
+                        <div class="pager">
+                            <div class="pagerbar">
+                                <a class="first disabled" href="javascript:;" title="首页"></a>
+                                <a class="disabled" href="javascript:;">上一页</a>
+                                <a class="current" href="javascript:;">1</a>
+                                <!--<a href="">2</a>-->
+                                <!--<a href="">3</a>-->
+                                <!--<a href="">4</a>-->
+                                <!--<a href="">5</a>-->
+                                <!--<span class="ellipsis">…</span>-->
+                                <a class="disabled" href="javascript:;">下一页</a>
+                                <a class="last disabled" href="javascript:;" title="末页"></a>
+                                <span class="addition">
+                                    <span class="redirect">跳转到
+                                        <input class="pn" value="1" name="pn" type="text">页
+                                        <a class="go" href="javascript:;"
+                                           onclick="var $pn=this.parentNode.getElementsByTagName('input')[0].value||1;$pn=/[^\d]/g.test($pn)?0:$pn;$pn=Math.min(Math.max($pn, 1),100);location.href=''">确定</a>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 职位列表end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var guideListVue = null;
+
+    $(function () {
+        guideListVue = new Vue({
+            el: '#guide_list',
+            data: {
+                filteredGuides: [
+                    {gid: 1, href: "/jobseeker/article", title: "求职者必看！这9步帮你打造成功求职简历", time: "2018-12-30"},
+                    {gid: 2, href: "/jobseeker/article", title: "男女求职心态不一 男生注重发展女生希望稳定", time: "2018-12-29"},
+                    {gid: 3, href: "/jobseeker/article", title: "这十种表现面试中最易被“秒杀”", time: "2018-12-28"},
+                    {gid: 4, href: "/jobseeker/article", title: "HR告诉你！终结面试95%都在这个套路", time: "2018-12-27"},
+                    {gid: 5, href: "/jobseeker/article", title: "别拿大学生应聘者不当一回事", time: "2018-12-26"},
+                    {gid: 6, href: "/jobseeker/article", title: "应届生面试：被问到这7个问题的机率超过60%！", time: "2018-12-25"},
+                    {gid: 7, href: "/jobseeker/article", title: "想让HR一眼相中你的简历，一定要注意这7点！", time: "2018-12-24"},
+                    {gid: 8, href: "/jobseeker/article", title: "职场：10个小失误让你连面试的机会都得不到", time: "2018-12-23"},
+                    {gid: 9, href: "/jobseeker/article", title: "面试要收费入职先交培训费...互联网招聘的那些“坑”", time: "2018-12-22"},
+                    {gid: 10, href: "/jobseeker/article", title: "不要相信这些招工信息 盘点招工诈骗手段", time: "2018-12-21"},
+                ]
+            },
+            methods: {
+                guideArticle: function (guide) {
+                    location.href = guide.href;
+                }
+            }
+        });
+
+        getGuidesList();
+    });
+
+    function getGuidesList() {
+        /*$.ajax({
+            type: "POST",
+            url: "/Guides",
+            dataType: "JSON",
+            success: function (data) {
+                // console.log(data);
+                if (data.status == "OK") {
+                    guideListVue.$data.filteredGuides = data.data;
+                } else {
+                    var dataReason = data.reason;
+                    if (data.reason == "" || typeof (data.reason) == "undefined") {
+                        dataReason = "网络连接错误，请稍后重试";
+                    }
+                    spop({
+                        template: '<h4 class="spop-title">查询就业指南失败</h4>' + dataReason,
+                        position: 'top-center',
+                        style: 'error',
+                        autoclose: 5000
+                    });
+                    return;
+                }
+            }
+        });*/
+    }
+</script>
+
+<!--#set var='compatible' value=''-->
+<link rel="stylesheet " href="https://concat.lietou-static.com/fe-c-pc/v5/css/common/footer.15139a62.css">
+<footer id="footer-p-beta2">
+    <hr>
+    <div class="wrap">
+        <div class="copyright">
+            <div class="copy-side">
+                服务热线 (免长话费)<br><strong>400-882-3823</strong><br>
+                <small>工作日 9:00-19:00</small>
+            </div>
+            <div class="copy-main">
+                <div class="item">
+                    <dl>
+                        <dt>投资者关系</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">公司简介</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">信息披露</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">企业管制</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">投资者关系联络</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>帮助</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">经理人帮助</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户注册</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于您的简历</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于猎头</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">关于职位</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>共赢</dt>
+                        <dd><a href="" target="_blank" rel="nofollow">网站合作</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">用户协议</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">网站地图</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">意见反馈</a></dd>
+                        <dd><a href="" target="_blank" rel="nofollow">加入钐椋网</a></dd>
+                    </dl>
+                </div>
+                <div class="item">
+                    <dl>
+                        <dt>导航</dt>
+                        <dd><a href="" target="_blank">猎聘天津</a></dd>
+                        <dd><a href="" target="_blank">全部招聘</a></dd>
+                        <dd><a href="" target="_blank">职位大全</a></dd>
+                        <dd><a href="" target="_blank">招聘职位</a></dd>
+                        <dd><a href="" target="_blank">企业名录</a></dd>
+                        <dd><a href="" target="_blank">城市列表</a></dd>
+                    </dl>
+                </div>
+                <div class="item item-weibo">
+                    <a href="" target="_blank" rel="nofollow"><i class="weibo"></i></a>
+                    <p>钐椋微博</p>
+                    <a class="btn-sina" href="" target="_blank" rel="nofollow"></a>
+                </div>
+                <div class="item item-apps">
+                    <i class="mishu" style="background: url(/static/images/mishu.png) no-repeat; background-size: 100%;"></i>
+                    <p>钐椋微信</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy-footer">
+        <p>京ICP备12345678号 合字2B-20181226 人才服务许可证:123456789101号
+            <a class="police-record" href="">
+                <img src="">
+                <span>京公网安备 12345678901112号</span>
+            </a>
+        </p>
+        <p>Copyright © 2006-2018 shanliang.com All Rights Reserved</p>
+    </div>
+</footer>
+
+</body>
+
+</html>
