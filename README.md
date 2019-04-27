@@ -1,4 +1,4 @@
-# Retruit
+# Recruit
 招聘网站(Spring Boot框架)
   
 2018下学年课设  
